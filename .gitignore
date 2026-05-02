@@ -1,2 +1,7 @@
 .vercel
 .env*.local
+caterings.html
+caterings_files/
+cateringse.html
+cateringse_files/
+*.html.bak
