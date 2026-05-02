@@ -3053,6 +3053,46 @@ footer {
   .service-image-wrapper { height: 220px !important; min-height: 220px !important; max-height: 220px !important; }
   .service-content { padding: 16px 14px 18px !important; }
 }
+
+/* ── Category Section Headers ── */
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 56px 0 24px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid var(--accent);
+  border-radius: 16px;
+}
+.cat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.cat-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.cat-desc {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .cat-header { flex-direction: column; text-align: center; padding: 18px; }
+  .cat-title { font-size: 1.15rem; }
+}
 </style>
 </head>
 <body>
@@ -3435,16 +3475,24 @@ footer {
 
   </div>
 </section-->
-<!-- ENHANCED SERVICES SECTION -->
+<!-- ENHANCED SERVICES SECTION — 4 CATEGORIES -->
 <section id="services">
-  <div style="max-width: 1400px; margin: 0 auto;">
+  <div style="max-width:1400px;margin:0 auto;">
     <div class="section-tag">Our Services</div>
-    <h2 class="section-title">Professional Services We Provide</h2>
-    <p class="section-sub">Comprehensive facility management solutions tailored to your specific needs with trained professionals and proven expertise.</p>
+    <h2 class="section-title">Professional Services <span style="background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">We Provide</span></h2>
+    <p class="section-sub">All services organised into 4 key categories — Security, Technical & Civil, Food & Hospitality, and HR & Support.</p>
 
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 1: SECURITY SERVICES                      -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626);"><i class="fas fa-shield-alt"></i></div>
+      <div>
+        <h3 class="cat-title">Security Services</h3>
+        <p class="cat-desc">Professional protection for residential, commercial and industrial premises — 24/7, verified and PSARA compliant.</p>
+      </div>
+    </div>
     <div class="services-grid">
-
-      <!-- Security Services -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
@@ -3457,123 +3505,99 @@ footer {
         <div class="service-content">
           <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-shield-alt"></i></div>
           <h3>Security Services</h3>
-          <p>Professional trained security guards for residential, commercial and industrial premises with round-the-clock protection.</p>
+          <p>Trained, background-verified security personnel for residential, commercial and industrial premises with round-the-clock protection.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Armed & Unarmed Guards</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>CCTV & Access Control</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Armed &amp; Unarmed Guards</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>CCTV &amp; Access Control</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>PSARA License Compliant</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Ex-Military & Police Trained</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Ex-Military &amp; Police Trained</span></div>
           </div>
           <span class="service-tag">24/7 Available</span>
         </div>
       </div>
+    </div>
 
-      <!-- Payroll Management -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 2: TECHNICAL & CIVIL                      -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);"><i class="fas fa-hard-hat"></i></div>
+      <div>
+        <h3 class="cat-title">Technical & Civil Services</h3>
+        <p class="cat-desc">Construction, repair, interior decoration, painting and pest control — complete technical solutions for your property.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="payrolles.jpg" alt="Payroll Management">
-              <img src="payroll.jpg" alt="Payroll">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=350&fit=crop" alt="HR Management">
-              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=350&fit=crop" alt="Documents">
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=350&fit=crop" alt="Business">
-            </div>
+            <div class="slides"><img src="civilprojectconstruction.webp" alt="Civil Construction"><img src="civilproject.jpg" alt="Civil Project"><img src="civilprojectimages.jpg" alt="Construction Work"><img src="civilworkporoject.jpg" alt="Civil Work"></div>
             <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
             <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
             <div class="slider-dots"></div>
           </div>
-        </div>
-        <div class="service-content">
-          <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-file-invoice-dollar"></i></div>
-          <h3>Payroll Management</h3>
-          <p>Complete payroll solutions â€” salary processing, compliance, PF/ESI management, and HR documentation.</p>
-          <span class="service-tag">HR Solutions</span>
-        </div>
-      </div>
-
-      <!-- Data Entry -->
-      <div class="service-card reveal">
-        <div class="service-image-wrapper">
-          <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=350&fit=crop" alt="Data Entry">
-              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=350&fit=crop" alt="Typing">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=350&fit=crop" alt="Data Analysis">
-              <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=350&fit=crop" alt="Office Work">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=350&fit=crop" alt="Computer Work">
-            </div>
-            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-        </div>
-        <div class="service-content">
-          <div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-keyboard"></i></div>
-          <h3>Data Entry Operators</h3>
-          <p>Skilled data entry professionals for accurate, fast and confidential data management for any industry.</p>
-          <span class="service-tag">BPO Support</span>
-        </div>
-      </div>
-
-      <!-- Civil & Construction -->
-      <div class="service-card reveal">
-        <div class="service-image-wrapper">
-          <div class="slider" data-index="0"><div class="slides"><img src="civilprojectconstruction.webp" alt="Civil Construction"><img src="civilproject.jpg" alt="Civil Project"><img src="civilprojectimages.jpg" alt="Construction Work"><img src="civilworkporoject.jpg" alt="Civil Work"></div><button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button><button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button><div class="slider-dots"></div></div>
         </div>
         <div class="service-content">
           <div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-hard-hat"></i></div>
-          <h3>Civil Projects & Construction</h3>
-          <p>New building construction, civil engineering projects and structural work handled by experienced engineers and skilled labour teams.</p>
+          <h3>Civil Projects &amp; Construction</h3>
+          <p>New building construction, civil engineering projects and structural work by experienced engineers and skilled labour teams.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Residential & Commercial Construction</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Residential &amp; Commercial Construction</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>Civil Engineering Projects</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Structural & Foundation Work</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>RCC & Brick Masonry</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Structural &amp; Foundation Work</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>RCC &amp; Brick Masonry</span></div>
           </div>
           <span class="service-tag">Construction</span>
         </div>
       </div>
 
-      <!-- Building Repair & Maintenance -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
-          <div class="slider" data-index="0"><div class="slides"><img src="buildingrepareservices.jpg" alt="Building Repair"><img src="buildingrepair.jpg" alt="Repair Work"><img src="buildingrepairimage.jpg" alt="Building Maintenance"><img src="buildingrepairse.webp" alt="Repair Service"></div><button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button><button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button><div class="slider-dots"></div></div>
+          <div class="slider" data-index="0">
+            <div class="slides"><img src="buildingrepareservices.jpg" alt="Building Repair"><img src="buildingrepair.jpg" alt="Repair Work"><img src="buildingrepairimage.jpg" alt="Building Maintenance"><img src="buildingrepairse.webp" alt="Repair Service"></div>
+            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
+            <div class="slider-dots"></div>
+          </div>
         </div>
         <div class="service-content">
           <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-wrench"></i></div>
-          <h3>Building Repair & Maintenance</h3>
-          <p>Complete building repair, preventive maintenance and annual upkeep services to keep your property in top condition year-round.</p>
+          <h3>Building Repair &amp; Maintenance</h3>
+          <p>Complete building repair, preventive maintenance and annual upkeep to keep your property in top condition year-round.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Crack Repair & Waterproofing</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Terrace & Roof Maintenance</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Plumbing & Drainage Repair</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Crack Repair &amp; Waterproofing</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Terrace &amp; Roof Maintenance</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Plumbing &amp; Drainage Repair</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>Annual Maintenance Contracts</span></div>
           </div>
           <span class="service-tag">AMC Available</span>
         </div>
       </div>
 
-      <!-- Interior Decoration -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
-          <div class="slider" data-index="0"><div class="slides"><img src="decoration.jpg" alt="Interior Decoration"><img src="decorationnewimage.jpg" alt="Interior Design"><img src="decorations.jpg" alt="Decoration Work"><img src="decorationses.jpg" alt="Interior Style"></div><button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button><button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button><div class="slider-dots"></div></div>
+          <div class="slider" data-index="0">
+            <div class="slides"><img src="decoration.jpg" alt="Interior Decoration"><img src="decorationnewimage.jpg" alt="Interior Design"><img src="decorations.jpg" alt="Decoration Work"><img src="decorationses.jpg" alt="Interior Style"></div>
+            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
+            <div class="slider-dots"></div>
+          </div>
         </div>
         <div class="service-content">
           <div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-couch"></i></div>
           <h3>Interior Decoration</h3>
-          <p>Transform your space with professional interior design and decoration â€” from modular kitchens to false ceilings and complete home makeovers.</p>
+          <p>Transform your space with professional interior design — false ceilings, modular kitchens, flooring and complete makeovers.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>False Ceiling & Partition Work</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Modular Kitchen & Wardrobes</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Flooring & Wall Cladding</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Lighting & Furnishing Design</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>False Ceiling &amp; Partition Work</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Modular Kitchen &amp; Wardrobes</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Flooring &amp; Wall Cladding</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Lighting &amp; Furnishing Design</span></div>
           </div>
           <span class="service-tag">Interior Design</span>
         </div>
       </div>
 
-      <!-- Paint Services -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <img src="paint.jpg" alt="Paint Services" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -3581,18 +3605,77 @@ footer {
         <div class="service-content">
           <div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-paint-roller"></i></div>
           <h3>Paint Services</h3>
-          <p>Professional interior and exterior painting with premium quality paints, skilled painters and clean, on-time delivery for homes and commercial spaces.</p>
+          <p>Professional interior and exterior painting with premium quality paints, skilled painters and on-time delivery.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Interior & Exterior Painting</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Texture & Designer Finishes</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Waterproof & Weather Coat</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Interior &amp; Exterior Painting</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Texture &amp; Designer Finishes</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Waterproof &amp; Weather Coat</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>All Premium Paint Brands</span></div>
           </div>
           <span class="service-tag">Paint Services</span>
         </div>
       </div>
 
-      <!-- Tiffin Services -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <div class="slider" data-index="0">
+            <div class="slides"><img src="pestcontrol.jpg" alt="Pest Control"><img src="pestscontrol.png" alt="Pest Treatment"><img src="pestcontrol.jpg" alt="Pest Service"><img src="pestscontrol.png" alt="Pest Spray"></div>
+            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
+            <div class="slider-dots"></div>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-bug"></i></div>
+          <h3>Pest Control</h3>
+          <p>Safe, government-approved pest solutions for homes, offices, hotels and industries using WHO-certified chemicals.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Termite, Rodent &amp; Cockroach Control</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>WHO-Approved Chemicals</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Annual Contracts Available</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Safe for Children &amp; Pets</span></div>
+          </div>
+          <span class="service-tag">Certified Safe</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 3: FOOD & HOSPITALITY                     -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#ec4899,#a855f7);"><i class="fas fa-concierge-bell"></i></div>
+      <div>
+        <h3 class="cat-title">Food &amp; Hospitality Services</h3>
+        <p class="cat-desc">Tiffin delivery, professional chefs, bartenders, kitchen stewards, pantry management, catering and event execution.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <div class="slider" data-index="0">
+            <div class="slides"><img src="catering.jpeg" alt="Catering Services"><img src="cateringsework.jpeg" alt="Catering Service Work"><img src="caters.jpeg" alt="Catering"><img src="caters.jpg" alt="Catering Food"><img src="catersing.webp" alt="Catering Setup"></div>
+            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
+            <div class="slider-dots"></div>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-utensils"></i></div>
+          <h3>Catering &amp; Food Services</h3>
+          <p>Corporate lunch, PG catering, banquet catering and bulk food with FSSAI-certified kitchens and hygiene-trained staff.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>50 to 5000+ Pax Capacity</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Corporate &amp; PG Contracts</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Multi-Cuisine Menus</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>FSSAI Certified Kitchen Staff</span></div>
+          </div>
+          <span class="service-tag">Corporate &amp; PG</span>
+        </div>
+      </div>
+
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
@@ -3605,94 +3688,63 @@ footer {
         <div class="service-content">
           <div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-box-open"></i></div>
           <h3>Tiffin Services</h3>
-          <p>Fresh, hygienic and timely tiffin delivery for offices, PGs, hostels and homes â€” daily meal plans with customised menus.</p>
+          <p>Fresh, hygienic and timely tiffin delivery for offices, PGs, hostels and homes — daily meal plans with customised menus.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Daily Meal Plans (Veg & Non-Veg)</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Office & PG Bulk Tiffin</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Hygienic FSSAI Certified Kitchen</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>On-Time Delivery Guaranteed</span></div>
-          </div>
-          <span class="service-tag">Daily Meals</span>
-        </div>
-      </div>
-        </div>
-        <div class="service-content">
-          <div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-box-open"></i></div>
-          <h3>Tiffin Services</h3>
-          <p>Fresh, hygienic and timely tiffin delivery for offices, PGs, hostels and homes â€” daily meal plans with customised menus.</p>
-          <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Daily Meal Plans (Veg & Non-Veg)</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Office & PG Bulk Tiffin</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Hygienic FSSAI Certified Kitchen</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Daily Meal Plans (Veg &amp; Non-Veg)</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Office &amp; PG Bulk Tiffin</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>FSSAI Certified Kitchen</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>On-Time Delivery Guaranteed</span></div>
           </div>
           <span class="service-tag">Daily Meals</span>
         </div>
       </div>
 
-      <!-- Chefs -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="catering.jpeg" alt="Professional Chef">
-              <img src="cateringsework.jpeg" alt="Chef at Work">
-              <img src="caters.jpeg" alt="Cooking">
-              <img src="caters.jpg" alt="Kitchen">
-              <img src="catersing.webp" alt="Chef Service">
-            </div>
+            <div class="slides"><img src="chef.webp" alt="Professional Chef"><img src="sheff.avif" alt="Chef Cooking"><img src="catering.jpeg" alt="Chef at Work"><img src="indian-food.jpg" alt="Chef Food"><img src="cateringsework.jpeg" alt="Kitchen Chef"></div>
             <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
             <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
             <div class="slider-dots"></div>
           </div>
         </div>
-        </div>
         <div class="service-content">
           <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-user-tie"></i></div>
           <h3>Professional Chefs</h3>
-          <p>Experienced chefs for homes, corporate kitchens, hotels and events â€” specialising in Indian, Continental, Chinese and multi-cuisine cooking.</p>
+          <p>Experienced chefs for homes, corporate kitchens, hotels and events — Indian, Continental, Chinese and multi-cuisine.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Indian & Continental Cuisine</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Home, Hotel & Event Chefs</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Part-Time & Full-Time Options</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Indian &amp; Continental Cuisine</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Home, Hotel &amp; Event Chefs</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Part-Time &amp; Full-Time Options</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>Background Verified Staff</span></div>
           </div>
           <span class="service-tag">Expert Chefs</span>
         </div>
       </div>
 
-      <!-- Bartender & Kitchen Steward -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="cateringsework.jpeg" alt="Bartender">
-              <img src="catersing.webp" alt="Kitchen Steward">
-              <img src="catering.jpeg" alt="Hospitality Staff">
-              <img src="caters.jpg" alt="Event Service">
-              <img src="caters.jpeg" alt="Bar Service">
-            </div>
+            <div class="slides"><img src="bartendar.jpg" alt="Bartender"><img src="bartender.jpg" alt="Bar Service"><img src="kitchensteward.jpg" alt="Kitchen Steward"><img src="cateringsework.jpeg" alt="Hospitality Staff"><img src="catersing.webp" alt="Event Service"></div>
             <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
             <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
             <div class="slider-dots"></div>
           </div>
         </div>
-        </div>
         <div class="service-content">
           <div class="service-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;"><i class="fas fa-cocktail"></i></div>
-          <h3>Bartender & Kitchen Steward</h3>
-          <p>Trained bartenders, mixologists and kitchen stewards for events, hotels, restaurants and corporate parties â€” professional and presentable.</p>
+          <h3>Bartender &amp; Kitchen Steward</h3>
+          <p>Trained bartenders, mixologists and kitchen stewards for events, hotels, restaurants and corporate parties.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Certified Bartenders & Mixologists</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Kitchen Stewards & Helpers</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Events, Hotels & Restaurants</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Uniformed & Groomed Staff</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Certified Bartenders &amp; Mixologists</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Kitchen Stewards &amp; Helpers</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Events, Hotels &amp; Restaurants</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Uniformed &amp; Groomed Staff</span></div>
           </div>
           <span class="service-tag">Hospitality</span>
         </div>
       </div>
 
-      <!-- Pantry Services -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
@@ -3704,39 +3756,18 @@ footer {
         </div>
         <div class="service-content">
           <div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-coffee"></i></div>
-          <h3>Pantry & Canteen Services</h3>
-          <p>Complete pantry management for corporate offices â€” tea, coffee, snacks, lunch and full canteen operations with trained pantry boys.</p>
+          <h3>Pantry &amp; Canteen Services</h3>
+          <p>Complete pantry management for corporate offices — tea, coffee, snacks, lunch and full canteen operations.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Tea, Coffee & Snack Service</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Tea, Coffee &amp; Snack Service</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>Corporate Canteen Management</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>Trained Pantry Boys</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Hygienic & Timely Service</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Hygienic &amp; Timely Service</span></div>
           </div>
           <span class="service-tag">Pantry Services</span>
         </div>
       </div>
 
-      <!-- (Food & Hospitality split into individual cards above) -->
-
-      <!-- Pest Control -->
-      <div class="service-card reveal">
-        <div class="service-image-wrapper">
-          <div class="slider" data-index="0">
-            <div class="slides"><img src="pestcontrol.jpg" alt="Pest Control"><img src="pestscontrol.png" alt="Pest Treatment"><img src="pestcontrol.jpg" alt="Pest Service"><img src="pestscontrol.png" alt="Pest Spray"><img src="pestcontrol.jpg" alt="Certified Pest Control"></div>
-            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-        </div>
-        <div class="service-content">
-          <div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-bug"></i></div>
-          <h3>Pest Control</h3>
-          <p>Safe and effective pest control solutions for homes, offices, hotels and industries using certified methods.</p>
-          <span class="service-tag">Certified Safe</span>
-        </div>
-      </div>
-
-      <!-- Event Management -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
@@ -3749,49 +3780,79 @@ footer {
         <div class="service-content">
           <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-glass-cheers"></i></div>
           <h3>Event Management</h3>
-          <p>Complete event planning and execution â€” corporate events, weddings and conferences with dedicated staff deployment.</p>
+          <p>Complete event planning and execution — corporate events, weddings and conferences with dedicated staff deployment.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Venue Setup & Decoration</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Corporate & Wedding Events</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>AV, Stage & Guest Management</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Venue Setup &amp; Decoration</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Corporate &amp; Wedding Events</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>AV, Stage &amp; Guest Management</span></div>
             <div class="sf-item"><i class="fas fa-check-circle"></i><span>Dedicated Event Coordinators</span></div>
           </div>
           <span class="service-tag">All Events</span>
         </div>
       </div>
 
-      <!-- Catering -->
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 4: HR & SUPPORT SERVICES                  -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#3b82f6,#06b6d4);"><i class="fas fa-briefcase"></i></div>
+      <div>
+        <h3 class="cat-title">HR &amp; Support Services</h3>
+        <p class="cat-desc">Payroll management, data entry operators and housekeeping — complete back-office and facility support for your business.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="catering.jpeg" alt="Catering Services">
-              <img src="cateringsework.jpeg" alt="Catering Service Work">
-              <img src="caters.jpeg" alt="Catering">
-              <img src="caters.jpg" alt="Catering Food">
-              <img src="catersing.webp" alt="Catering Setup">
-            </div>
+            <div class="slides"><img src="payrolles.jpg" alt="Payroll Management"><img src="payroll.jpg" alt="Payroll"><img src="payrolles.jpg" alt="HR Management"></div>
             <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
             <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
             <div class="slider-dots"></div>
           </div>
         </div>
         <div class="service-content">
-          <div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-utensils"></i></div>
-          <h3>Catering &amp; Food Services</h3>
-          <p>Corporate lunch, PG catering, banquet catering and bulk food services with FSSAI-certified kitchen staff.</p>
+          <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h3>Payroll Management</h3>
+          <p>Complete payroll solutions — salary processing, PF/ESI compliance, HR documentation for all business sizes.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>50 to 5000+ Pax Capacity</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Corporate & PG Contracts</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Multi-Cuisine Menus</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>FSSAI Certified Kitchen Staff</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Monthly Salary Processing</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>PF, ESI &amp; TDS Management</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Full Labour Law Compliance</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>HR Documentation Support</span></div>
           </div>
-          <span class="service-tag">Corporate &amp; PG</span>
+          <span class="service-tag">HR Solutions</span>
         </div>
       </div>
 
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <div class="slider" data-index="0">
+            <div class="slides"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=350&fit=crop" alt="Data Entry"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=350&fit=crop" alt="Data Analysis"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=350&fit=crop" alt="Computer Work"></div>
+            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
+            <div class="slider-dots"></div>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-keyboard"></i></div>
+          <h3>Data Entry Operators</h3>
+          <p>Skilled DEOs for accurate, fast and confidential data management — Excel, Tally, ERP and document digitization.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Excel, Tally &amp; ERP Operators</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Document Digitization</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>NDA &amp; Confidentiality Assured</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>On-Site &amp; Remote Options</span></div>
+          </div>
+          <span class="service-tag">BPO Support</span>
+        </div>
+      </div>
 
     </div>
+
   </div>
 </section>
 
