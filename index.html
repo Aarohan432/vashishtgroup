@@ -2518,6 +2518,54 @@ img {
 }
 
 /* ============================================================
+   LAPTOP / DESKTOP RESPONSIVE FIX — FINAL OVERRIDE
+   ============================================================ */
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 28px !important;
+  margin-top: 40px;
+}
+.service-image-wrapper {
+  width: 100% !important;
+  height: 240px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+}
+.service-image-wrapper img,
+.service-image-wrapper > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  transition: transform 0.5s ease !important;
+}
+.service-card:hover .service-image-wrapper img { transform: scale(1.06) !important; }
+.service-content { padding: 20px 18px 22px !important; flex-grow: 1; display: flex; flex-direction: column; }
+.service-card h3 { font-size: 1.05rem !important; font-weight: 800 !important; margin-bottom: 8px !important; }
+.service-card > .service-content > p { font-size: 0.84rem !important; line-height: 1.6 !important; margin-bottom: 12px !important; }
+.sf-item { font-size: 0.81rem !important; }
+section { padding: 70px 5% !important; }
+
+@media (max-width: 1200px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 22px !important; }
+  .service-image-wrapper { height: 220px !important; }
+}
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+  .service-image-wrapper { height: 200px !important; }
+  section { padding: 56px 4% !important; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+  .service-image-wrapper { height: 210px !important; }
+  .service-content { padding: 16px 14px 18px !important; }
+  section { padding: 48px 4% !important; }
+}
+
+/* ============================================================
    FINAL UI POLISH â€” overrides all conflicting rules above
    ============================================================ */
 
@@ -3243,8 +3291,8 @@ footer {
             <div class="slides">
               <img src="security.jpg" alt="Security Services">
               <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=350&fit=crop" alt="Security Guard">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=350&fit=crop" alt="CCTV Security">
-              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=350&fit=crop" alt="Security Patrol">
+              <img src="civilprojectconstruction.webp" alt="CCTV Security">
+              <img src="buildingrepareservices.jpg" alt="Security Patrol">
               <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=350&fit=crop" alt="Security Team">
             </div>
             <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
@@ -3266,40 +3314,16 @@ footer {
         </div>
       </div>
 
-      <!-- Payroll Management -->
-      <div class="service-card reveal">
-        <div class="service-image-wrapper">
-          <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="payrolles.jpg" alt="Payroll Management">
-              <img src="payroll.jpg" alt="Payroll">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=350&fit=crop" alt="HR Management">
-              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=350&fit=crop" alt="Documents">
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=350&fit=crop" alt="Business">
-            </div>
-            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-        </div>
-        <div class="service-content">
-          <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-file-invoice-dollar"></i></div>
-          <h3>Payroll Management</h3>
-          <p>Complete payroll solutions â€” salary processing, compliance, PF/ESI management, and HR documentation.</p>
-          <span class="service-tag">HR Solutions</span>
-        </div>
-      </div>
-
       <!-- Data Entry -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
             <div class="slides">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=350&fit=crop" alt="Data Entry">
-              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=350&fit=crop" alt="Typing">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=350&fit=crop" alt="Data Analysis">
-              <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=350&fit=crop" alt="Office Work">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=350&fit=crop" alt="Computer Work">
+              <img src="chef.webp" alt="Data Entry">
+              <img src="sheff.avif" alt="Typing">
+              <img src="indian-food.jpg" alt="Data Analysis">
+              <img src="catering.jpeg" alt="Office Work">
+              <img src="cateringsework.jpeg" alt="Computer Work">
             </div>
             <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
             <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
@@ -3515,30 +3539,6 @@ footer {
         </div>
       </div>
 
-      <!-- Home Care -->
-      <div class="service-card reveal">
-        <div class="service-image-wrapper">
-          <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=350&fit=crop" alt="Home Care">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=350&fit=crop" alt="Cleaning">
-              <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600&h=350&fit=crop" alt="Cooking">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=350&fit=crop" alt="Home Service">
-              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=350&fit=crop" alt="Kitchen">
-            </div>
-            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-        </div>
-        <div class="service-content">
-          <div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-home"></i></div>
-          <h3>Home Care</h3>
-          <p>Expert home care staff for daily housekeeping, cooking, elderly assistance and all domestic needs.</p>
-          <span class="service-tag">Domestic Help</span>
-        </div>
-      </div>
-
       <!-- (Food & Hospitality split into individual cards above) -->
 
       <!-- Pest Control -->
@@ -3548,7 +3548,7 @@ footer {
             <div class="slides">
               <img src="https://images.unsplash.com/photo-1631986563149-a64f9f0a0f3e?w=600&h=350&fit=crop" alt="Pest Control">
               <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=350&fit=crop" alt="Spraying">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=350&fit=crop" alt="Pest Treatment">
+              <img src="civilprojectconstruction.webp" alt="Pest Treatment">
               <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=350&fit=crop" alt="Cleaning Service">
               <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600&h=350&fit=crop" alt="Hygiene">
             </div>
@@ -3660,11 +3660,11 @@ footer {
         <div class="service-image-wrapper">
           <div class="slider" data-index="0">
             <div class="slides">
-              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=350&fit=crop" alt="Technical Services">
+              <img src="sheff.avif" alt="Technical Services">
               <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=350&fit=crop" alt="Electrical">
               <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=350&fit=crop" alt="Plumbing">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=350&fit=crop" alt="AC Service">
-              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=350&fit=crop" alt="Maintenance">
+              <img src="civilprojectconstruction.webp" alt="AC Service">
+              <img src="buildingrepareservices.jpg" alt="Maintenance">
             </div>
             <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
             <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
