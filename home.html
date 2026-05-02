@@ -2679,6 +2679,19 @@ nav {
   flex-shrink: 0;
 }
 
+/* ── Single image in service card (no slider) ── */
+.service-image-wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.service-card:hover .service-image-wrapper > img {
+  transform: scale(1.07);
+}
+
 /* ── Why Us ── */
 .why-grid {
   display: grid;
@@ -3304,33 +3317,152 @@ footer {
       <!-- Civil & Construction -->
       <div class="service-card reveal">
         <div class="service-image-wrapper">
-          <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=350&fit=crop" alt="Construction">
-              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=350&fit=crop" alt="Building">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=350&fit=crop" alt="Repair">
-              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=350&fit=crop" alt="Interior">
-              <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&h=350&fit=crop" alt="Paint">
-            </div>
-            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
+          <img src="civil.jpg" alt="Civil & Construction" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(239,68,68,0.1))\'><i class=\'fas fa-hard-hat\' style=\'font-size:3rem;color:rgba(245,158,11,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add civil.jpg</span></div>'">
         </div>
-        <!-- Content below photo -->
         <div class="service-content">
           <div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-hard-hat"></i></div>
-          <h3>Civil & Construction</h3>
-          <p>End-to-end civil and construction solutions — from new builds to complete renovation, handled by experienced engineers and skilled workers.</p>
+          <h3>Civil Projects & Construction</h3>
+          <p>New building construction, civil engineering projects and structural work handled by experienced engineers and skilled labour teams.</p>
           <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Civil Projects & New Construction</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Building Repair & Maintenance</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Interior Decoration & Design</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Professional Paint Services</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Waterproofing & Flooring</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>False Ceiling & Modular Work</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Residential & Commercial Construction</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Civil Engineering Projects</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Structural & Foundation Work</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>RCC & Brick Masonry</span></div>
           </div>
           <span class="service-tag">Construction</span>
+        </div>
+      </div>
+
+      <!-- Building Repair & Maintenance -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <img src="repair.jpg" alt="Building Repair" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(16,185,129,0.1))\'><i class=\'fas fa-wrench\' style=\'font-size:3rem;color:rgba(59,130,246,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add repair.jpg</span></div>'">
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-wrench"></i></div>
+          <h3>Building Repair & Maintenance</h3>
+          <p>Complete building repair, preventive maintenance and annual upkeep services to keep your property in top condition year-round.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Crack Repair & Waterproofing</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Terrace & Roof Maintenance</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Plumbing & Drainage Repair</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Annual Maintenance Contracts</span></div>
+          </div>
+          <span class="service-tag">AMC Available</span>
+        </div>
+      </div>
+
+      <!-- Interior Decoration -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <img src="interior.jpg" alt="Interior Decoration" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(168,85,247,0.2),rgba(236,72,153,0.1))\'><i class=\'fas fa-couch\' style=\'font-size:3rem;color:rgba(168,85,247,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add interior.jpg</span></div>'">
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-couch"></i></div>
+          <h3>Interior Decoration</h3>
+          <p>Transform your space with professional interior design and decoration — from modular kitchens to false ceilings and complete home makeovers.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>False Ceiling & Partition Work</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Modular Kitchen & Wardrobes</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Flooring & Wall Cladding</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Lighting & Furnishing Design</span></div>
+          </div>
+          <span class="service-tag">Interior Design</span>
+        </div>
+      </div>
+
+      <!-- Paint Services -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <img src="paint.jpg" alt="Paint Services" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(16,185,129,0.2),rgba(245,158,11,0.1))\'><i class=\'fas fa-paint-roller\' style=\'font-size:3rem;color:rgba(16,185,129,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add paint.jpg</span></div>'">
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-paint-roller"></i></div>
+          <h3>Paint Services</h3>
+          <p>Professional interior and exterior painting with premium quality paints, skilled painters and clean, on-time delivery for homes and commercial spaces.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Interior & Exterior Painting</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Texture & Designer Finishes</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Waterproof & Weather Coat</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>All Premium Paint Brands</span></div>
+          </div>
+          <span class="service-tag">Paint Services</span>
+        </div>
+      </div>
+
+      <!-- Tiffin Services -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <img src="tiffin.jpg" alt="Tiffin Services" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(20,184,166,0.2),rgba(245,158,11,0.1))\'><i class=\'fas fa-box-open\' style=\'font-size:3rem;color:rgba(20,184,166,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add tiffin.jpg</span></div>'">
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-box-open"></i></div>
+          <h3>Tiffin Services</h3>
+          <p>Fresh, hygienic and timely tiffin delivery for offices, PGs, hostels and homes — daily meal plans with customised menus.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Daily Meal Plans (Veg & Non-Veg)</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Office & PG Bulk Tiffin</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Hygienic FSSAI Certified Kitchen</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>On-Time Delivery Guaranteed</span></div>
+          </div>
+          <span class="service-tag">Daily Meals</span>
+        </div>
+      </div>
+
+      <!-- Chefs -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <img src="chef.jpg" alt="Professional Chefs" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(245,158,11,0.1))\'><i class=\'fas fa-user-tie\' style=\'font-size:3rem;color:rgba(239,68,68,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add chef.jpg</span></div>'">
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-user-tie"></i></div>
+          <h3>Professional Chefs</h3>
+          <p>Experienced chefs for homes, corporate kitchens, hotels and events — specialising in Indian, Continental, Chinese and multi-cuisine cooking.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Indian & Continental Cuisine</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Home, Hotel & Event Chefs</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Part-Time & Full-Time Options</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Background Verified Staff</span></div>
+          </div>
+          <span class="service-tag">Expert Chefs</span>
+        </div>
+      </div>
+
+      <!-- Bartender & Kitchen Steward -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <img src="bartender.jpg" alt="Bartender & Kitchen Steward" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(236,72,153,0.2),rgba(168,85,247,0.1))\'><i class=\'fas fa-cocktail\' style=\'font-size:3rem;color:rgba(236,72,153,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add bartender.jpg</span></div>'">
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;"><i class="fas fa-cocktail"></i></div>
+          <h3>Bartender & Kitchen Steward</h3>
+          <p>Trained bartenders, mixologists and kitchen stewards for events, hotels, restaurants and corporate parties — professional and presentable.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Certified Bartenders & Mixologists</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Kitchen Stewards & Helpers</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Events, Hotels & Restaurants</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Uniformed & Groomed Staff</span></div>
+          </div>
+          <span class="service-tag">Hospitality</span>
+        </div>
+      </div>
+
+      <!-- Pantry Services -->
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <img src="pantry.jpg" alt="Pantry Services" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(234,179,8,0.2),rgba(20,184,166,0.1))\'><i class=\'fas fa-coffee\' style=\'font-size:3rem;color:rgba(234,179,8,0.6);\'></i><span style=\'font-size:.78rem;color:rgba(255,255,255,.5)\'>Add pantry.jpg</span></div>'">
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-coffee"></i></div>
+          <h3>Pantry & Canteen Services</h3>
+          <p>Complete pantry management for corporate offices — tea, coffee, snacks, lunch and full canteen operations with trained pantry boys.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Tea, Coffee & Snack Service</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Corporate Canteen Management</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Trained Pantry Boys</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Hygienic & Timely Service</span></div>
+          </div>
+          <span class="service-tag">Pantry Services</span>
         </div>
       </div>
 
@@ -3358,38 +3490,7 @@ footer {
         </div>
       </div>
 
-      <!-- Food & Hospitality Staff -->
-      <div class="service-card reveal">
-        <div class="service-image-wrapper">
-          <div class="slider" data-index="0">
-            <div class="slides">
-              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=350&fit=crop" alt="Chef">
-              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561404?w=600&h=350&fit=crop" alt="Tiffin">
-              <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=350&fit=crop" alt="Kitchen">
-              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=350&fit=crop" alt="Bartender">
-              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=350&fit=crop" alt="Pantry">
-            </div>
-            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-        </div>
-        <!-- Content below photo -->
-        <div class="service-content">
-          <div class="service-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;"><i class="fas fa-concierge-bell"></i></div>
-          <h3>Food & Hospitality Staff</h3>
-          <p>Complete food and hospitality staffing — from daily tiffin services to professional chefs, bartenders and full kitchen management for homes, corporates and events.</p>
-          <div class="service-features">
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Tiffin & Meal Delivery Services</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Professional Chefs (Indian & Continental)</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Bartenders & Mixologists</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Kitchen Stewards & Helpers</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Pantry & Canteen Management</span></div>
-            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Event & Banquet Food Staff</span></div>
-          </div>
-          <span class="service-tag">Hospitality</span>
-        </div>
-      </div>
+      <!-- (Food & Hospitality split into individual cards above) -->
 
       <!-- Pest Control -->
       <div class="service-card reveal">
