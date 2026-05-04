@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vashisth Facility Management | Your Complete Service Partner</title>
+<meta name="description" content="Vashisth Facility Management - Providing Security, Housekeeping, Technical, Catering, Care and many more professional services across India.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ============================================================
+   VASHISTH FM — ORIGINAL CSS (PRESERVED COMPLETELY)
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+img { max-width: 100%; height: auto; display: block; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --primary:  #1e1b4b;
+  --surface:  #312e81;
+  --surface2: #4338ca;
+  --accent:   #f59e0b;
+  --accent2:  #06b6d4;
+  --danger:   #ef4444;
+  --success:  #10b981;
+  --glass:    rgba(255,255,255,0.1);
+  --border:   rgba(255,255,255,0.15);
+  --text:     #f8fafc;
+  --muted:    #c7d2fe;
+  --radius:   20px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #1e3a5f 55%, #0f4c75 80%, #1e1b4b 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 0 5%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15,23,42,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 4px 40px rgba(0,0,0,0.5); }
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+.logo span { font-weight: 400; opacity: 0.85; }
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.25s;
+  position: relative;
+  white-space: nowrap;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+.nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.nav-links a:hover::after { width: 60%; }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.active::after { width: 60%; }
+.nav-cta {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff !important;
+  padding: 9px 22px !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  margin-left: 8px;
+  transition: transform 0.25s, box-shadow 0.25s !important;
+}
+.nav-cta:hover { transform: scale(1.05) !important; box-shadow: 0 4px 20px rgba(245,158,11,0.45) !important; background: rgba(255,255,255,0.05) !important; }
+.nav-cta::after { display: none !important; }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  transition: background 0.2s;
+  flex-shrink: 0;
+  z-index: 1001;
+}
+.hamburger:hover { background: rgba(255,255,255,0.09); }
+.hamburger .bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  transform-origin: center;
+}
+.hamburger.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 998;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.nav-overlay.visible { display: block; opacity: 1; }
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(300px, 85vw);
+  height: 100vh;
+  background: #0f1e35;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+  flex-direction: column;
+  padding: 90px 28px 40px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  overflow-y: auto;
+}
+.mobile-menu.open { display: flex; transform: translateX(0); }
+.mobile-menu a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 14px 16px;
+  border-radius: 12px;
+  transition: all 0.25s;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.mobile-menu a i { width: 20px; text-align: center; color: var(--accent); font-size: 0.9rem; }
+.mobile-menu a:hover { color: var(--text); background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.08); }
+.mobile-menu a.active { color: var(--accent); background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.2); }
+.mobile-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 16px 0; }
+.mobile-cta { background: linear-gradient(135deg, #f59e0b, #ef4444) !important; color: #fff !important; font-weight: 700 !important; justify-content: center !important; border: none !important; margin-top: 8px; border-radius: 50px !important; }
+.mobile-cta i { color: #fff !important; }
+.mobile-contact-info { margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
+.mobile-contact-info p { color: var(--muted); font-size: 0.78rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.mobile-contact-info p i { color: var(--accent); width: 14px; }
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 5% 80px; position: relative; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%,rgba(139,92,246,0.4) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(245,158,11,0.3) 0%,transparent 55%),radial-gradient(ellipse at 60% 80%,rgba(6,182,212,0.25) 0%,transparent 50%),linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#1e3a5f 100%); }
+.hero-orb { position: absolute; border-radius: 50%; filter: blur(80px); animation: float 8s ease-in-out infinite; }
+.orb1 { width: 500px; height: 500px; background: rgba(139,92,246,0.35); top: -150px; left: -150px; }
+.orb2 { width: 350px; height: 350px; background: rgba(245,158,11,0.28); bottom: -80px; right: -80px; animation-delay: 3s; }
+@keyframes float { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-30px); } }
+.hero-content { position: relative; z-index: 2; max-width: 800px; }
+.hero-badge { display: inline-block; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.4); color: var(--accent); padding: 8px 20px; border-radius: 30px; font-size: .85rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 1px; }
+.hero h1 { font-size: clamp(2.5rem,6vw,4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 24px; }
+.hero h1 span { background: linear-gradient(135deg,#f59e0b,#ef4444,#3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 1.1rem; color: var(--muted); max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
+.hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: linear-gradient(135deg,#f59e0b,#ef4444); color: #fff; padding: 14px 36px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1rem; transition: .3s; display: inline-block; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(245,158,11,0.4); }
+.btn-secondary { background: transparent; border: 2px solid rgba(255,255,255,0.2); color: #fff; padding: 14px 36px; border-radius: 50px; font-weight: 600; text-decoration: none; font-size: 1rem; transition: .3s; display: inline-block; }
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+section { padding: 90px 5%; }
+.section-tag { color: var(--accent); font-size: .85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.8rem,4vw,3rem); font-weight: 800; margin-bottom: 16px; }
+.section-sub { color: var(--muted); font-size: 1rem; max-width: 600px; line-height: 1.7; margin-bottom: 50px; }
+#about { background: rgba(255,255,255,0.012); }
+.about-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-visual { position: relative; display: flex; flex-direction: column; gap: 16px; }
+.about-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 28px 32px; display: flex; align-items: center; gap: 20px; transition: 0.3s; }
+.about-card:hover { border-color: rgba(245,158,11,0.3); transform: translateX(6px); }
+.about-card-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+.about-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.about-card p { color: var(--muted); font-size: 0.84rem; line-height: 1.5; }
+.about-text h2 { font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+.about-text p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 16px; }
+.about-highlight { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.about-pill { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); color: var(--accent); padding: 7px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.service-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 32px 28px; transition: .4s; cursor: pointer; position: relative; overflow: hidden; }
+.service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg,rgba(245,158,11,0.06),transparent); opacity: 0; transition: .4s; }
+.service-card:hover::before { opacity: 1; }
+.service-card:hover { transform: translateY(-8px); border-color: rgba(245,158,11,0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+.service-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 20px; }
+.service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+.service-card p { color: var(--muted); font-size: .88rem; line-height: 1.6; }
+.service-tag { display: inline-block; margin-top: 14px; padding: 4px 12px; border-radius: 20px; font-size: .75rem; font-weight: 600; color: var(--accent); background: rgba(245,158,11,0.1); }
+.sub-security-title { font-size: 1.3rem; font-weight: 700; margin: 50px 0 20px 0; padding-left: 12px; border-left: 4px solid var(--accent); color: var(--accent); display: flex; align-items: center; gap: 10px; }
+.img-placeholder { width: 100%; height: 180px; background: rgba(255,255,255,0.03); border-radius: 16px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; flex-direction: column; border: 1px dashed rgba(245,158,11,0.3); color: var(--muted); font-size: 0.75rem; }
+.img-placeholder i { font-size: 2rem; color: var(--accent); margin-bottom: 8px; }
+.service-features-mini { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.service-features-mini span { background: rgba(245,158,11,0.1); padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 500; color: var(--accent); }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 24px; }
+.why-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px; text-align: center; transition: .3s; }
+.why-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-5px); }
+.why-icon { font-size: 2rem; margin-bottom: 14px; }
+.why-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+.why-card p { color: var(--muted); font-size: .85rem; line-height: 1.6; }
+.contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.contact-info p { color: var(--muted); line-height: 1.7; margin-bottom: 30px; }
+.contact-item { display: flex; gap: 14px; align-items: center; margin-bottom: 20px; }
+.contact-item-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(245,158,11,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+.contact-item-text span { display: block; color: var(--muted); font-size: .8rem; }
+.contact-item-text strong { font-size: .95rem; }
+.contact-form { background: var(--glass); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 40px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 8px; color: var(--muted); }
+.form-group input, .form-group textarea, .form-group select { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 16px; color: #fff; font-family: 'Outfit',sans-serif; font-size: .95rem; transition: .3s; outline: none; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); background: rgba(245,158,11,0.05); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select option { background: #1e293b; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.submit-btn { width: 100%; padding: 14px; font-size: 1rem; border-radius: 12px; background: linear-gradient(135deg,#f59e0b,#ef4444); color: #fff; border: none; font-weight: 700; cursor: pointer; font-family: 'Outfit',sans-serif; transition: .3s; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(245,158,11,0.4); }
+footer { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); padding: 60px 5% 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand p { color: var(--muted); font-size: .88rem; line-height: 1.7; margin-top: 12px; }
+.footer-col h5 { font-size: .95rem; font-weight: 700; margin-bottom: 16px; color: #fff; }
+.footer-col a { display: block; color: var(--muted); text-decoration: none; font-size: .87rem; margin-bottom: 10px; transition: .3s; }
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-bottom p { color: var(--muted); font-size: .83rem; }
+.social-links { display: flex; align-items: center; gap: 4px; }
+.social-links a { color: var(--muted); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); transition: .3s; }
+.social-links a:hover { color: var(--accent); border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.08); }
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s ease,transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media(max-width:1024px){ .footer-grid{ grid-template-columns:1fr 1fr; } .about-wrapper{ grid-template-columns:1fr; } }
+@media(max-width:900px){ .contact-wrapper{ grid-template-columns:1fr; } .nav-links{ display:none !important; } .hamburger{ display:flex; } }
+@media(max-width:600px){ .footer-grid{ grid-template-columns:1fr; } .form-row{ grid-template-columns:1fr; } .hero-badge{ font-size:.78rem; } }
+#lastdiv { height: auto; background-color: transparent; }
+#mainNav { background-color: rgba(11,17,32,0.95); }
+#about { background: linear-gradient(180deg, rgba(26,37,64,0.4) 0%, transparent 100%); }
+#services { background: linear-gradient(180deg, transparent 0%, rgba(17,24,39,0.6) 100%); }
+#why { background: rgba(26,37,64,0.3); }
+#contact { background: linear-gradient(180deg, rgba(17,24,39,0.4) 0%, var(--primary) 100%); }
+
+/* Additional styles for sliders and cat-header */
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 56px 0 24px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid var(--accent);
+  border-radius: 16px;
+}
+.cat-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff; flex-shrink: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+.cat-title { font-size: 1.4rem; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+.cat-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+.service-image-wrapper { width: 100%; height: 220px; overflow: hidden; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; border-radius: 12px; margin-bottom: 16px; }
+.service-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slider { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.slides { display: flex; height: 100%; transition: transform 0.5s ease; }
+.slides img { min-width: 100%; width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; z-index: 10; opacity: 0; transition: opacity 0.3s; }
+.service-card:hover .slider-btn { opacity: 1; }
+.slider-btn.prev { left: 8px; }
+.slider-btn.next { right: 8px; }
+.slider-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 10; }
+.slider-dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; }
+.slider-dots span.active { background: #f59e0b; width: 10px; border-radius: 4px; }
+.service-content { padding: 0; }
+.sf-item { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 0.8rem; }
+@media (max-width: 600px) { .cat-header { flex-direction: column; text-align: center; padding: 18px; } .cat-title { font-size: 1.15rem; } }
+</style>
+</head>
+<body>
+<!-- ===================== NAVBAR ===================== -->
+<nav id="mainNav">
+  <a href="#home" class="logo">Vashisth<span>FM</span></a>
+  <div class="nav-links" id="desktopNav">
+    <a href="#home" class="active" data-section="home"><i class="fas fa-home" style="font-size:0.75rem;margin-right:3px;"></i> Home</a>
+    <a href="#services" data-section="services">Services</a>
+    <a href="#about" data-section="about">About Us</a>
+    <a href="#why" data-section="why">Why Us</a>
+    <a href="#contact" data-section="contact">Contact</a>
+    <a href="#contact" class="nav-cta">Get a Free Quote</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Toggle menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeMobileMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobileMenu()"><i class="fas fa-home"></i> Home</a>
+  <a href="#services" onclick="closeMobileMenu()"><i class="fas fa-briefcase"></i> Services</a>
+  <a href="#about" onclick="closeMobileMenu()"><i class="fas fa-building"></i> About Us</a>
+  <a href="#why" onclick="closeMobileMenu()"><i class="fas fa-star"></i> Why Us</a>
+  <a href="#contact" onclick="closeMobileMenu()"><i class="fas fa-paper-plane"></i> Contact</a>
+  <div class="mobile-divider"></div>
+  <a href="#contact" class="mobile-cta" onclick="closeMobileMenu()"><i class="fas fa-paper-plane"></i> Get a Free Quote</a>
+  <div class="mobile-contact-info"><p><i class="fas fa-phone"></i> +91 124 449 8545</p><p><i class="fas fa-envelope"></i> info@vashisthfm.com</p><p><i class="fas fa-map-marker-alt"></i> Sector 69, Gurgaon 122102</p></div>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div><div class="hero-orb orb1"></div><div class="hero-orb orb2"></div>
+  <div class="hero-content"><div class="hero-badge">India's Trusted Facility Partner</div><h1>Complete <span>Professional Services</span> Under One Roof</h1><p>A proud unit of Vashisth Group, established in 2020, VASHISTH Facility Management Pvt Ltd is committed to delivering excellence across a broad spectrum of services. Our trained professionals and 24/7 support ensure precision and reliability.</p><div class="hero-btns"><a href="#services" class="btn-primary">Explore Services</a><a href="#contact" class="btn-secondary">Contact Us</a></div></div>
+</section>
+
+<!-- ===================== HERO SLIDER ===================== -->
+<section id="hero-slider-section">
+  <div class="hero-slider-wrapper">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slides">
+        <div class="hero-slide"><img src="security.jpg" alt="Security Services"><div class="hero-slide-overlay"><span class="slide-badge">Security Services</span><h3>Professional Security Guards</h3><p>Round-the-clock protection for residential, commercial &amp; industrial premises by trained, verified personnel.</p></div></div>
+        <div class="hero-slide"><img src="eventmanagement.jpg" alt="Event Management"><div class="hero-slide-overlay"><span class="slide-badge">Event Management</span><h3>Flawless Event Execution</h3><p>Corporate events, weddings &amp; conferences managed end-to-end with dedicated staff deployment.</p></div></div>
+        <div class="hero-slide"><img src="baby.avif" alt="Baby Care"><div class="hero-slide-overlay"><span class="slide-badge">Civil &amp; Hospitality</span><h3>Build, Renovate & Serve</h3><p>Civil construction, building repair, interior decoration, paint services, chefs, bartenders &amp; pantry staff.</p></div></div>
+        <div class="hero-slide"><img src="payrolles.jpg" alt="Payroll Management"><div class="hero-slide-overlay"><span class="slide-badge">Payroll Management</span><h3>Complete HR &amp; Payroll Solutions</h3><p>Salary processing, PF/ESI compliance, HR documentation â€” all handled by our expert team.</p></div></div>
+        <div class="hero-slide"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&h=600&fit=crop" alt="Housekeeping"><div class="hero-slide-overlay"><span class="slide-badge">Housekeeping &amp; Technical</span><h3>Spotless Spaces, Smooth Operations</h3><p>Professional housekeeping, AC service, electrical, plumbing &amp; full facility maintenance under one roof.</p></div></div>
+      </div>
+      <button class="hs-btn hs-prev" onclick="heroSlide(-1)">&#10094;</button>
+      <button class="hs-btn hs-next" onclick="heroSlide(1)">&#10095;</button>
+      <div class="hs-dots" id="hsDots"></div>
+    </div>
+    <div class="slider-info-strip">
+      <div class="strip-item"><i class="fas fa-shield-alt"></i><div><strong>Security &amp; Surveillance</strong><span>Trained guards, CCTV monitoring &amp; access control</span></div></div>
+      <div class="strip-divider"></div>
+      <div class="strip-item"><i class="fas fa-broom"></i><div><strong>Housekeeping &amp; Hygiene</strong><span>Deep cleaning, pest control &amp; facility upkeep</span></div></div>
+      <div class="strip-divider"></div>
+      <div class="strip-item"><i class="fas fa-heart"></i><div><strong>Care &amp; Hospitality</strong><span>Home care, chefs, bartenders &amp; pantry staff</span></div></div>
+      <div class="strip-divider"></div>
+      <div class="strip-item"><i class="fas fa-tools"></i><div><strong>Technical &amp; Events</strong><span>AMC, catering, payroll &amp; event management</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-wrapper">
+    <div class="about-visual reveal">
+      <div class="about-card"><div class="about-card-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-calendar-alt"></i></div><div><h4>Established 2020</h4><p>A proud unit of the Vashisth Group with rapid growth across India.</p></div></div>
+      <div class="about-card"><div class="about-card-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-users"></i></div><div><h4>1000+ Trained Professionals</h4><p>Background-verified, skilled and certified workforce across all service domains.</p></div></div>
+      <div class="about-card"><div class="about-card-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-handshake"></i></div><div><h4>500+ Happy Clients</h4><p>Serving corporates, institutions, hospitals and residential societies.</p></div></div>
+      <div class="about-card"><div class="about-card-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-map-marked-alt"></i></div><div><h4>Pan-India Presence</h4><p>Operations across NCR, Gurgaon and expanding to major cities nationwide.</p></div></div>
+    </div>
+    <div class="about-text reveal"><div class="section-tag">About Us</div><h2>Who We <span style="background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Are</span></h2><p>VASHISTH Facility Management Pvt Ltd is a comprehensive facility management company that delivers a complete ecosystem of professional services â€” from security and housekeeping to catering, technical maintenance, and specialized care.</p><p>As a proud unit of the Vashisth Group, we operate with the core belief that every client deserves exceptional service quality, full statutory compliance, and a single trusted partner for all their operational needs.</p><p>We are headquartered in Gurgaon and serve clients across the NCR region and beyond, deploying only verified, trained, and certified professionals on every assignment.</p><div class="about-highlight"><span class="about-pill">ISO Certified Processes</span><span class="about-pill">PF &amp; ESI Compliant</span><span class="about-pill">24/7 Operations</span><span class="about-pill">Vashisth Group</span></div></div>
+  </div>
+</section>
+
+<!-- ENHANCED SERVICES SECTION — WITH 3 NEW SECURITY SUB-SECTIONS ADDED -->
+<section id="services">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="section-tag">Our Services</div>
+    <h2 class="section-title">Professional Services <span style="background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">We Provide</span></h2>
+    <p class="section-sub">All services organised into 4 key categories — Security, Technical & Civil, Food & Hospitality, and HR & Support.</p>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 1: SECURITY SERVICES (EXISTING - KEPT AS IS) -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626);"><i class="fas fa-shield-alt"></i></div>
+      <div><h3 class="cat-title">Security Services</h3><p class="cat-desc">Professional protection for residential, commercial and industrial premises — 24/7, verified and PSARA compliant.</p></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-image-wrapper">
+          <div class="slider" data-index="0">
+            <div class="slides"><img src="security.jpg" alt="Security Services"><img src="securitty.jpg" alt="Security Guard"><img src="securityes.jpg" alt="Security Team"><img src="securityesse.jpg" alt="Security Patrol"><img src="securityse.jpg" alt="Security Service"></div>
+            <button class="slider-btn prev" onclick="slideMove(this,-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="slideMove(this,1)">&#10095;</button>
+            <div class="slider-dots"></div>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-shield-alt"></i></div>
+          <h3>Security Services</h3>
+          <p>Trained, background-verified security personnel for residential, commercial and industrial premises with round-the-clock protection.</p>
+          <div class="service-features">
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Armed &amp; Unarmed Guards</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>CCTV &amp; Access Control</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>PSARA License Compliant</span></div>
+            <div class="sf-item"><i class="fas fa-check-circle"></i><span>Ex-Military &amp; Police Trained</span></div>
+          </div>
+          <span class="service-tag">24/7 Available</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= NEW SECTION 1: PHYSICAL MANNED SECURITY (6 CARDS) ========= -->
+    <h3 class="sub-security-title reveal"><i class="fas fa-user-shield"></i> Physical Manned Security</h3>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-user"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-user"></i></div><h3>Uniformed Security Officers</h3><p>Deployed at residential, commercial, and industrial sites to deter crime and ensure safety.</p><div class="service-features-mini"><span>24/7 Patrol</span><span>Access Control</span><span>Visitor Management</span></div><span class="service-tag">Perimeter Security</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-gun"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-gun"></i></div><h3>Armed Security Guards</h3><p>Deployed for high-risk locations such as banks, luxury showrooms, and VIP movement.</p><div class="service-features-mini"><span>Licensed Weapons</span><span>High Risk</span><span>Cash Van Security</span></div><span class="service-tag">Armed Protection</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-fist-raised"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-fist-raised"></i></div><h3>Bouncers &amp; Executive Protection</h3><p>Specialist security for clubs, events, and VIP security protection (PSA).</p><div class="service-features-mini"><span>Crowd Control</span><span>VIP Protocol</span><span>Bodyguard Skills</span></div><span class="service-tag">Executive Protection</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-female"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-female"></i></div><h3>Female Security Guards</h3><p>Provided for corporate environments, schools, hospitals, and women's safety.</p><div class="service-features-mini"><span>Corporate Ready</span><span>Sensitive Areas</span><span>Lady Checking</span></div><span class="service-tag">Female Guards</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-truck-fast"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-truck-fast"></i></div><h3>Quick Response Teams (QRT)</h3><p>Mobile, highly trained teams for immediate response to security violations.</p><div class="service-features-mini"><span>Rapid Action</span><span>Emergency Response</span><span>Patrol Vehicles</span></div><span class="service-tag">QRT</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-dog"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-dog"></i></div><h3>Canine Security Services</h3><p>Dog units used for surveillance, explosive detection in sensitive areas.</p><div class="service-features-mini"><span>Sniffer Dogs</span><span>Patrol Dogs</span><span>Explosive Detection</span></div><span class="service-tag">K9 Unit</span></div>
+    </div>
+
+    <!-- ========= NEW SECTION 2: ELECTRONIC SECURITY & SURVEILLANCE (4 CARDS) ========= -->
+    <h3 class="sub-security-title reveal"><i class="fas fa-video"></i> Electronic Security &amp; Surveillance</h3>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-camera"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-camera"></i></div><h3>CCTV Surveillance</h3><p>Installation and remote monitoring of high-definition cameras with AI analytics.</p><div class="service-features-mini"><span>HD Cameras</span><span>Remote Access</span><span>Night Vision</span></div><span class="service-tag">CCTV</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-fingerprint"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(139,92,246,0.15);color:#8b5cf6;"><i class="fas fa-fingerprint"></i></div><h3>Access Control &amp; Biometric Systems</h3><p>Managing entry to buildings using smart cards, biometrics, or facial recognition.</p><div class="service-features-mini"><span>Biometric</span><span>Smart Cards</span><span>Facial Recognition</span></div><span class="service-tag">Access Control</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-bell"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-bell"></i></div><h3>Intrusion Detection &amp; Alarm Systems</h3><p>Electronic systems to alert operators to unauthorized access in real-time.</p><div class="service-features-mini"><span>Motion Sensors</span><span>Glass Break</span><span>Door Sensors</span></div><span class="service-tag">Alarm Systems</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-fire-extinguisher"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-fire-extinguisher"></i></div><h3>Fire Detection &amp; Prevention</h3><p>Installation and maintenance of fire alarm systems, smoke detectors.</p><div class="service-features-mini"><span>Smoke Detectors</span><span>Fire Panels</span><span>Sprinkler Systems</span></div><span class="service-tag">Fire Safety</span></div>
+    </div>
+
+    <!-- ========= NEW SECTION 3: SPECIALIZED SECURITY SERVICES (6 CARDS) ========= -->
+    <h3 class="sub-security-title reveal"><i class="fas fa-star-of-life"></i> Specialized Security Services</h3>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-calendar-alt"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-calendar-alt"></i></div><h3>Event Security</h3><p>Tailored security for weddings, concerts, and large public gatherings.</p><div class="service-features-mini"><span>Concerts</span><span>Weddings</span><span>Stadiums</span></div><span class="service-tag">Event Security</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-search"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-search"></i></div><h3>Private Investigation &amp; Detective Services</h3><p>Pre-employment background verification, corporate intelligence, and risk assessment.</p><div class="service-features-mini"><span>Background Check</span><span>Corporate Intel</span><span>Due Diligence</span></div><span class="service-tag">Investigation</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-money-bill-wave"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-money-bill-wave"></i></div><h3>Cash Management Services</h3><p>Secure transportation of cash and valuable goods using armored vehicles.</p><div class="service-features-mini"><span>Armored Vans</span><span>Cash Logistics</span><span>ATM Replenishment</span></div><span class="service-tag">Cash in Transit</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-laptop-code"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-laptop-code"></i></div><h3>Cybersecurity Services</h3><p>Protection for businesses against data breaches, hacking, and online threats.</p><div class="service-features-mini"><span>Data Protection</span><span>Threat Monitoring</span><span>Firewall Management</span></div><span class="service-tag">Cyber Security</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-building"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;"><i class="fas fa-building"></i></div><h3>Integrated Facility Management</h3><p>Combining security with housekeeping, maintenance, and administrative services.</p><div class="service-features-mini"><span>Multi-Service</span><span>Single Window</span><span>Cost Efficient</span></div><span class="service-tag">IFM</span></div>
+      <div class="service-card reveal"><div class="img-placeholder"><i class="fas fa-concierge-bell"></i><span>Add Image Here</span></div><div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-concierge-bell"></i></div><h3>Concierge / Lobby Security</h3><p>Professional staff for front desk management, visitor screening, and hospitality security.</p><div class="service-features-mini"><span>Front Desk</span><span>Visitor Mgmt</span><span>Guest Relations</span></div><span class="service-tag">Concierge Security</span></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 2: TECHNICAL & CIVIL (EXISTING - KEPT AS IS) -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);"><i class="fas fa-hard-hat"></i></div>
+      <div><h3 class="cat-title">Technical Services</h3><p class="cat-desc">Civil construction, building repair, interior decoration, paint services and pest control — complete technical solutions.</p></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-hard-hat"></i></div><h3>Civil Projects &amp; Construction</h3><p>New building construction, civil engineering projects and structural work.</p><span class="service-tag">Construction</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-wrench"></i></div><h3>Building Repair &amp; Maintenance</h3><p>Complete building repair, preventive maintenance and annual upkeep contracts.</p><span class="service-tag">AMC Available</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-couch"></i></div><h3>Interior Decoration</h3><p>Transform your space with professional interior design — false ceilings, modular kitchens, flooring.</p><span class="service-tag">Interior Design</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-paint-roller"></i></div><h3>Paint Services</h3><p>Professional interior and exterior painting with premium quality paints.</p><span class="service-tag">Paint Services</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-bug"></i></div><h3>Pest Control</h3><p>Safe, government-approved pest solutions for homes, offices, hotels and industries.</p><span class="service-tag">Certified Safe</span></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 3: FOOD & HOSPITALITY (EXISTING - KEPT AS IS) -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#10b981,#06b6d4);"><i class="fas fa-star"></i></div>
+      <div><h3 class="cat-title">Soft Skills</h3><p class="cat-desc">Catering, tiffin services, professional chefs, bartenders, kitchen stewards, pantry management and event management.</p></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-utensils"></i></div><h3>Catering &amp; Food Services</h3><p>Corporate lunch, PG catering, banquet catering and bulk food with FSSAI-certified kitchens.</p><span class="service-tag">Corporate &amp; PG</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-box-open"></i></div><h3>Tiffin Services</h3><p>Fresh, hygienic and timely tiffin delivery for offices, PGs, hostels and homes.</p><span class="service-tag">Daily Meals</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-user-tie"></i></div><h3>Professional Chefs</h3><p>Experienced chefs for homes, corporate kitchens, hotels and events — multi-cuisine.</p><span class="service-tag">Expert Chefs</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;"><i class="fas fa-cocktail"></i></div><h3>Bartender &amp; Kitchen Steward</h3><p>Trained bartenders, mixologists and kitchen stewards for events, hotels, restaurants.</p><span class="service-tag">Hospitality</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-coffee"></i></div><h3>Pantry &amp; Canteen Services</h3><p>Complete pantry management for corporate offices — tea, coffee, snacks, lunch.</p><span class="service-tag">Pantry Services</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-glass-cheers"></i></div><h3>Event Management</h3><p>Complete event planning and execution — corporate events, weddings and conferences.</p><span class="service-tag">All Events</span></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 4: HR & SUPPORT SERVICES (EXISTING - KEPT AS IS) -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div class="cat-header reveal">
+      <div class="cat-icon" style="background:linear-gradient(135deg,#3b82f6,#06b6d4);"><i class="fas fa-file-invoice-dollar"></i></div>
+      <div><h3 class="cat-title">Payroll Services</h3><p class="cat-desc">Complete payroll processing, PF/ESI compliance, HR documentation and data entry operator services.</p></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-file-invoice-dollar"></i></div><h3>Payroll Management</h3><p>Complete payroll solutions — salary processing, PF/ESI compliance, HR documentation.</p><span class="service-tag">HR Solutions</span></div>
+      <div class="service-card reveal"><div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-keyboard"></i></div><h3>Data Entry Operators</h3><p>Skilled DEOs for accurate, fast and confidential data management — Excel, Tally, ERP.</p><span class="service-tag">BPO Support</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why"><div class="section-tag">Why Choose Us</div><h2 class="section-title">We Deliver <span style="background:linear-gradient(135deg,#3b82f6,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Excellence</span></h2><p class="section-sub">Our commitment to quality, reliability and professionalism makes us the preferred service partner.</p><div class="why-grid"><div class="why-card reveal"><div class="why-icon"><i class="fas fa-user-check" style="color:#10b981;"></i></div><h4>Verified Professionals</h4><p>All staff are background-verified, trained and certified.</p></div><div class="why-card reveal"><div class="why-icon"><i class="fas fa-clock" style="color:#3b82f6;"></i></div><h4>24/7 Support</h4><p>Round-the-clock availability for emergencies.</p></div><div class="why-card reveal"><div class="why-icon"><i class="fas fa-clipboard-check" style="color:#f59e0b;"></i></div><h4>Compliance Ready</h4><p>All services follow statutory compliance.</p></div><div class="why-card reveal"><div class="why-icon"><i class="fas fa-tag" style="color:#ec4899;"></i></div><h4>Competitive Pricing</h4><p>Transparent pricing with no hidden charges.</p></div><div class="why-card reveal"><div class="why-icon"><i class="fas fa-trophy" style="color:#eab308;"></i></div><h4>500+ Clients</h4><p>Proven track record since 2020.</p></div><div class="why-card reveal"><div class="why-icon"><i class="fas fa-layer-group" style="color:#a855f7;"></i></div><h4>One-Stop Solution</h4><p>All services under one umbrella.</p></div></div></section>
+
+<section id="contact">
+  <div class="contact-wrapper">
+    <div class="contact-info reveal">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Work <span style="background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Together</span></h2>
+      <p>Have a requirement? Get a free quote today. Our team will get back to you within 24 hours.</p>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div class="contact-item-text"><span>Call Us</span><strong>+91 124 449 8545</strong></div></div>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div class="contact-item-text"><span>Email Us</span><strong>info@vashisthfm.com</strong></div></div>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-item-text"><span>Our Office</span><strong>Plot No 3, Sector 69, Gurgaon Bhondsi 122102</strong></div></div>
+      <div id="lastdiv"><div class="event-card"><div class="event-img-wrap"><img src="eventmanage.jpeg" alt="Event Management"/><div class="event-img-overlay"><span class="event-live-badge"><i class="fas fa-circle"></i> Available Now</span></div></div><div class="event-card-body"><div class="event-card-tag"><i class="fas fa-glass-cheers"></i> Event Management</div><h4 class="event-card-title">We Plan. You Celebrate.</h4><p class="event-card-desc">Complete event planning and execution — corporate events, weddings, conferences with dedicated staff deployment.</p><div class="event-features"><div class="event-feat"><i class="fas fa-check-circle"></i> Corporate Events</div><div class="event-feat"><i class="fas fa-check-circle"></i> Weddings</div><div class="event-feat"><i class="fas fa-check-circle"></i> Conferences</div><div class="event-feat"><i class="fas fa-check-circle"></i> Dedicated Staff</div></div><a href="#contact" class="event-cta-btn">Get a Free Quote <i class="fas fa-arrow-right"></i></a></div></div></div>
+    </div>
+    <div class="contact-form reveal">
+      <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:24px;">Request a Free Quote</h3>
+      <div class="form-row"><div class="form-group"><label>Full Name</label><input type="text" id="name" placeholder="Your name"></div><div class="form-group"><label>Phone</label><input type="tel" id="phone" placeholder="+91 XXXXX XXXXX"></div></div>
+      <div class="form-group"><label>Email</label><input type="email" id="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Service Required</label><select id="service"><option value="">Select a Service</option><option>Security Services</option><option>Payroll Management</option><option>Data Entry Operators</option><option>Civil & Construction</option><option>Home Care</option><option>Food & Hospitality Staff</option><option>Pest Control</option><option>Event Management</option><option>Catering and Food Services</option><option>Housekeeping Services</option><option>Technical Services</option></select></div>
+      <div class="form-group"><label>Message</label><textarea id="message" placeholder="Tell us about your requirement..."></textarea></div>
+      <button class="submit-btn" onclick="submitForm()">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="#home" class="logo">Vashisth<span>FM</span></a><p>Your complete professional facility management partner. Delivering excellence in security, housekeeping, technical, care and more across India.</p><div class="social-links" style="margin-top:20px;"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+    <div class="footer-col"><h5>Services</h5><a href="#services">Security</a><a href="#services">Housekeeping</a><a href="#services">Technical</a><a href="#services">Catering</a><a href="#services">Event Management</a></div>
+    <div class="footer-col"><h5>Care Services</h5><a href="#services">Civil & Construction</a><a href="#services">Home Care</a><a href="#services">Food & Hospitality</a><a href="#services">Pest Control</a><a href="#services">Payroll Mgmt</a></div>
+    <div class="footer-col"><h5>Company</h5><a href="#about">About Us</a><a href="#why">Why Us</a><a href="#contact">Careers</a><a href="#contact">Privacy Policy</a><a href="#contact">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><p>2024 Vashisth Facility Management Pvt Ltd. All rights reserved.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+</footer>
+
+<script>
+function toggleMobileMenu() { const menu = document.getElementById('mobileMenu'); const overlay = document.getElementById('navOverlay'); const btn = document.getElementById('hamburgerBtn'); const isOpen = menu.classList.contains('open'); if (isOpen) { closeMobileMenu(); } else { menu.style.display = 'flex'; requestAnimationFrame(() => { menu.classList.add('open'); overlay.classList.add('visible'); btn.classList.add('open'); }); document.body.style.overflow = 'hidden'; } }
+function closeMobileMenu() { const menu = document.getElementById('mobileMenu'); const overlay = document.getElementById('navOverlay'); const btn = document.getElementById('hamburgerBtn'); menu.classList.remove('open'); overlay.classList.remove('visible'); btn.classList.remove('open'); document.body.style.overflow = ''; setTimeout(() => { if (!menu.classList.contains('open')) menu.style.display = 'none'; }, 400); }
+const nav = document.getElementById('mainNav'); window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); updateActiveLink(); });
+function updateActiveLink() { const sections = ['home', 'services', 'about', 'why', 'contact']; const scrollPos = window.scrollY + 120; let current = 'home'; sections.forEach(id => { const el = document.getElementById(id); if (el && el.offsetTop <= scrollPos) current = id; }); document.querySelectorAll('.nav-links a[data-section]').forEach(a => { a.classList.toggle('active', a.dataset.section === current); }); }
+const reveals = document.querySelectorAll('.reveal'); const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 }); reveals.forEach(r => observer.observe(r));
+function initSliders() { document.querySelectorAll('.slider').forEach(slider => { const slides = slider.querySelector('.slides'); const imgs = slides.querySelectorAll('img'); const dotsContainer = slider.querySelector('.slider-dots'); let current = 0; let autoTimer; imgs.forEach((_, i) => { const dot = document.createElement('span'); if (i === 0) dot.classList.add('active'); dot.addEventListener('click', () => goTo(i)); dotsContainer.appendChild(dot); }); function goTo(index) { current = (index + imgs.length) % imgs.length; slides.style.transform = `translateX(-${current * 100}%)`; dotsContainer.querySelectorAll('span').forEach((d, i) => { d.classList.toggle('active', i === current); }); } function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 3000); } function stopAuto() { clearInterval(autoTimer); } slider._goTo = goTo; slider._stopAuto = stopAuto; slider._startAuto = startAuto; slider.addEventListener('mouseenter', stopAuto); slider.addEventListener('mouseleave', startAuto); startAuto(); }); }
+function slideMove(btn, dir) { const slider = btn.closest('.slider'); const dots = slider.querySelectorAll('.slider-dots span'); let current = [...dots].findIndex(d => d.classList.contains('active')); slider._stopAuto(); slider._goTo(current + dir); slider._startAuto(); }
+initSliders();
+function submitForm() { const name = document.getElementById('name').value.trim(); const phone = document.getElementById('phone').value.trim(); if (!name) { alert('Please enter your full name.'); return; } if (!phone) { alert('Please enter your phone number.'); return; } alert('Thank you, ' + name + '! We will contact you within 24 hours.'); }
+(function() { const slider = document.getElementById('heroSlider'); if(!slider) return; const slidesEl = slider.querySelector('.hero-slides'); const slides = slider.querySelectorAll('.hero-slide'); const dotsEl = document.getElementById('hsDots'); let current = 0; let autoTimer; slides.forEach((_, i) => { const d = document.createElement('span'); if (i === 0) d.classList.add('active'); d.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }); dotsEl.appendChild(d); }); slides[0].classList.add('active'); function goTo(n) { slides[current].classList.remove('active'); dotsEl.querySelectorAll('span')[current].classList.remove('active'); current = (n + slides.length) % slides.length; slidesEl.style.transform = `translateX(-${current * 100}%)`; slides[current].classList.add('active'); dotsEl.querySelectorAll('span')[current].classList.add('active'); } function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 4000); } function stopAuto() { clearInterval(autoTimer); } slider.addEventListener('mouseenter', stopAuto); slider.addEventListener('mouseleave', startAuto); window.heroSlide = function(dir) { stopAuto(); goTo(current + dir); startAuto(); }; startAuto(); })();
+</script>
+</body>
+</html>
