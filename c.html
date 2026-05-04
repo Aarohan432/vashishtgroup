@@ -3093,534 +3093,6 @@ footer {
   .cat-header { flex-direction: column; text-align: center; padding: 18px; }
   .cat-title { font-size: 1.15rem; }
 }
-/* ============================================================
-   FIXED UNIQUE CSS FOR PHYSICAL MANNED SECURITY CARDS
-   ============================================================ */
-
-/* Override conflicting styles for physical security cards */
-#physical-security-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 28px !important;
-  margin: 30px 0 40px !important;
-}
-
-/* Individual Card Styling - Proper Alignment */
-#physical-security-grid .service-card {
-  background: linear-gradient(145deg, rgba(49,46,129,0.85), rgba(30,58,95,0.8));
-  border: 1px solid rgba(139,92,246,0.3);
-  border-radius: 20px !important;
-  padding: 28px 24px !important;
-  transition: all 0.4s ease !important;
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-  text-align: left !important;
-}
-
-/* Border left accent colors */
-#card-uniformed { border-left: 4px solid #ef4444 !important; }
-#card-armed { border-left: 4px solid #f59e0b !important; }
-#card-bouncers { border-left: 4px solid #a855f7 !important; }
-#card-female { border-left: 4px solid #3b82f6 !important; }
-#card-qrt { border-left: 4px solid #10b981 !important; }
-#card-canine { border-left: 4px solid #eab308 !important; }
-
-/* Image Placeholder */
-.img-placeholder {
-  width: 100% !important;
-  height: 180px !important;
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  margin-bottom: 18px !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 2px dashed rgba(255,255,255,0.2);
-  transition: all 0.3s;
-}
-.img-placeholder i { font-size: 2rem; margin-bottom: 8px; color: #f59e0b; }
-.img-placeholder span { font-size: 0.75rem; color: #94a3b8; }
-
-/* Service Icon */
-#physical-security-grid .service-icon {
-  width: 56px !important;
-  height: 56px !important;
-  border-radius: 14px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 1.6rem !important;
-  margin-bottom: 18px !important;
-}
-
-/* Icon Colors */
-#card-uniformed .service-icon { background: rgba(239,68,68,0.15); color: #ef4444; }
-#card-armed .service-icon { background: rgba(245,158,11,0.15); color: #f59e0b; }
-#card-bouncers .service-icon { background: rgba(168,85,247,0.15); color: #a855f7; }
-#card-female .service-icon { background: rgba(59,130,246,0.15); color: #3b82f6; }
-#card-qrt .service-icon { background: rgba(16,185,129,0.15); color: #10b981; }
-#card-canine .service-icon { background: rgba(234,179,8,0.15); color: #eab308; }
-
-/* Titles */
-#physical-security-grid .service-card h3 {
-  font-size: 1.2rem !important;
-  font-weight: 800 !important;
-  margin-bottom: 10px !important;
-  color: #fff !important;
-  transition: color 0.3s;
-}
-
-/* Description */
-#physical-security-grid .service-card p {
-  color: #cbd5e6 !important;
-  font-size: 0.88rem !important;
-  line-height: 1.55 !important;
-  margin-bottom: 14px !important;
-}
-
-/* Feature Badges */
-.feature-badges {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 8px !important;
-  margin: 12px 0 15px !important;
-}
-.feature-badges span {
-  padding: 5px 12px !important;
-  border-radius: 20px !important;
-  font-size: 0.7rem !important;
-  font-weight: 600 !important;
-}
-
-/* Tag Styling */
-#physical-security-grid .service-tag {
-  display: inline-block !important;
-  margin-top: 8px !important;
-  padding: 5px 14px !important;
-  border-radius: 20px !important;
-  font-size: 0.7rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-  width: fit-content !important;
-  border: 1px solid !important;
-}
-
-/* Tag Colors */
-#tag-uniformed { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.4); color: #ef4444; }
-#tag-armed { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.4); color: #f59e0b; }
-#tag-bouncers { background: rgba(168,85,247,0.12); border-color: rgba(168,85,247,0.4); color: #a855f7; }
-#tag-female { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.4); color: #3b82f6; }
-#tag-qrt { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.4); color: #10b981; }
-#tag-canine { background: rgba(234,179,8,0.12); border-color: rgba(234,179,8,0.4); color: #eab308; }
-
-/* Feature Badge Colors */
-#features-uniformed span { background: rgba(239,68,68,0.12); color: #ef4444; }
-#features-armed span { background: rgba(245,158,11,0.12); color: #f59e0b; }
-#features-bouncers span { background: rgba(168,85,247,0.12); color: #a855f7; }
-#features-female span { background: rgba(59,130,246,0.12); color: #3b82f6; }
-#features-qrt span { background: rgba(16,185,129,0.12); color: #10b981; }
-#features-canine span { background: rgba(234,179,8,0.12); color: #eab308; }
-
-/* Hover Effects */
-#physical-security-grid .service-card:hover {
-  transform: translateY(-8px) !important;
-  transition: all 0.3s ease !important;
-}
-#card-uniformed:hover { border-color: #ef4444 !important; box-shadow: 0 20px 40px rgba(239,68,68,0.2) !important; }
-#card-armed:hover { border-color: #f59e0b !important; box-shadow: 0 20px 40px rgba(245,158,11,0.2) !important; }
-#card-bouncers:hover { border-color: #a855f7 !important; box-shadow: 0 20px 40px rgba(168,85,247,0.2) !important; }
-#card-female:hover { border-color: #3b82f6 !important; box-shadow: 0 20px 40px rgba(59,130,246,0.2) !important; }
-#card-qrt:hover { border-color: #10b981 !important; box-shadow: 0 20px 40px rgba(16,185,129,0.2) !important; }
-#card-canine:hover { border-color: #eab308 !important; box-shadow: 0 20px 40px rgba(234,179,8,0.2) !important; }
-
-/* Title Hover Colors */
-#card-uniformed:hover #title-uniformed { color: #ef4444 !important; }
-#card-armed:hover #title-armed { color: #f59e0b !important; }
-#card-bouncers:hover #title-bouncers { color: #a855f7 !important; }
-#card-female:hover #title-female { color: #3b82f6 !important; }
-#card-qrt:hover #title-qrt { color: #10b981 !important; }
-#card-canine:hover #title-canine { color: #eab308 !important; }
-
-/* Image Placeholder Hover */
-#card-uniformed:hover .img-placeholder { border-color: #ef4444 !important; background: rgba(239,68,68,0.05) !important; }
-#card-armed:hover .img-placeholder { border-color: #f59e0b !important; background: rgba(245,158,11,0.05) !important; }
-#card-bouncers:hover .img-placeholder { border-color: #a855f7 !important; background: rgba(168,85,247,0.05) !important; }
-#card-female:hover .img-placeholder { border-color: #3b82f6 !important; background: rgba(59,130,246,0.05) !important; }
-#card-qrt:hover .img-placeholder { border-color: #10b981 !important; background: rgba(16,185,129,0.05) !important; }
-#card-canine:hover .img-placeholder { border-color: #eab308 !important; background: rgba(234,179,8,0.05) !important; }
-
-/* Sub Security Title */
-.sub-security-title {
-  font-size: 1.5rem !important;
-  font-weight: 800 !important;
-  margin: 50px 0 25px 0 !important;
-  padding-left: 15px !important;
-  border-left: 5px solid #f59e0b !important;
-  color: #fff !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-}
-.sub-security-title i { color: #f59e0b !important; font-size: 1.8rem !important; }
-
-/* Responsive */
-@media (max-width: 1024px) {
-  #physical-security-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
-}
-@media (max-width: 768px) {
-  #physical-security-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
-}
-/* ============================================================
-   FIXED CSS FOR PHYSICAL MANNED SECURITY & ELECTRONIC SECURITY
-   ============================================================ */
-
-/* Common styling for all security card grids */
-#physical-security-grid,
-#electronic-security-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 28px !important;
-  margin: 30px 0 40px !important;
-}
-
-/* Common styling for all security cards */
-#physical-security-grid .service-card,
-#electronic-security-grid .service-card {
-  background: linear-gradient(145deg, rgba(49,46,129,0.85), rgba(30,58,95,0.8)) !important;
-  border: 1px solid rgba(139,92,246,0.3) !important;
-  border-radius: 20px !important;
-  padding: 28px 26px !important;  /* THIS FIXES THE LEFT PADDING */
-  transition: all 0.4s ease !important;
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-  text-align: left !important;
-}
-
-/* Border left accent colors - Physical Security */
-#card-uniformed { border-left: 4px solid #ef4444 !important; }
-#card-armed { border-left: 4px solid #f59e0b !important; }
-#card-bouncers { border-left: 4px solid #a855f7 !important; }
-#card-female { border-left: 4px solid #3b82f6 !important; }
-#card-qrt { border-left: 4px solid #10b981 !important; }
-#card-canine { border-left: 4px solid #eab308 !important; }
-
-/* Border left accent colors - Electronic Security */
-#card-cctv { border-left: 4px solid #3b82f6 !important; }
-#card-access { border-left: 4px solid #8b5cf6 !important; }
-#card-intrusion { border-left: 4px solid #ef4444 !important; }
-#card-fire { border-left: 4px solid #f59e0b !important; }
-
-/* Image Placeholder */
-.img-placeholder {
-  width: 100% !important;
-  height: 180px !important;
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  margin-bottom: 20px !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 2px dashed rgba(255,255,255,0.2);
-  transition: all 0.3s;
-}
-.img-placeholder i { font-size: 2rem; margin-bottom: 8px; color: #f59e0b; }
-.img-placeholder span { font-size: 0.75rem; color: #94a3b8; }
-
-/* Service Icon */
-#physical-security-grid .service-icon,
-#electronic-security-grid .service-icon {
-  width: 56px !important;
-  height: 56px !important;
-  border-radius: 14px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 1.6rem !important;
-  margin-bottom: 18px !important;
-}
-
-/* Titles */
-#physical-security-grid .service-card h3,
-#electronic-security-grid .service-card h3 {
-  font-size: 1.2rem !important;
-  font-weight: 800 !important;
-  margin-bottom: 10px !important;
-  color: #fff !important;
-  transition: color 0.3s;
-}
-
-/* Description */
-#physical-security-grid .service-card p,
-#electronic-security-grid .service-card p {
-  color: #cbd5e6 !important;
-  font-size: 0.88rem !important;
-  line-height: 1.55 !important;
-  margin-bottom: 14px !important;
-}
-
-/* Feature Badges */
-.feature-badges {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 8px !important;
-  margin: 12px 0 15px !important;
-}
-.feature-badges span {
-  padding: 5px 12px !important;
-  border-radius: 20px !important;
-  font-size: 0.7rem !important;
-  font-weight: 600 !important;
-}
-
-/* Tag Styling */
-#physical-security-grid .service-tag,
-#electronic-security-grid .service-tag {
-  display: inline-block !important;
-  margin-top: 8px !important;
-  padding: 5px 14px !important;
-  border-radius: 20px !important;
-  font-size: 0.7rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-  width: fit-content !important;
-  border: 1px solid !important;
-}
-
-/* ========== PHYSICAL SECURITY COLORS ========== */
-/* Icon Colors */
-#card-uniformed .service-icon { background: rgba(239,68,68,0.15); color: #ef4444; }
-#card-armed .service-icon { background: rgba(245,158,11,0.15); color: #f59e0b; }
-#card-bouncers .service-icon { background: rgba(168,85,247,0.15); color: #a855f7; }
-#card-female .service-icon { background: rgba(59,130,246,0.15); color: #3b82f6; }
-#card-qrt .service-icon { background: rgba(16,185,129,0.15); color: #10b981; }
-#card-canine .service-icon { background: rgba(234,179,8,0.15); color: #eab308; }
-
-/* Tag Colors */
-#tag-uniformed { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.4); color: #ef4444; }
-#tag-armed { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.4); color: #f59e0b; }
-#tag-bouncers { background: rgba(168,85,247,0.12); border-color: rgba(168,85,247,0.4); color: #a855f7; }
-#tag-female { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.4); color: #3b82f6; }
-#tag-qrt { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.4); color: #10b981; }
-#tag-canine { background: rgba(234,179,8,0.12); border-color: rgba(234,179,8,0.4); color: #eab308; }
-
-/* Feature Badge Colors */
-#features-uniformed span { background: rgba(239,68,68,0.12); color: #ef4444; }
-#features-armed span { background: rgba(245,158,11,0.12); color: #f59e0b; }
-#features-bouncers span { background: rgba(168,85,247,0.12); color: #a855f7; }
-#features-female span { background: rgba(59,130,246,0.12); color: #3b82f6; }
-#features-qrt span { background: rgba(16,185,129,0.12); color: #10b981; }
-#features-canine span { background: rgba(234,179,8,0.12); color: #eab308; }
-
-/* Image Placeholder Border Colors - Physical */
-#img-uniformed { border-color: rgba(239,68,68,0.4); }
-#img-armed { border-color: rgba(245,158,11,0.4); }
-#img-bouncers { border-color: rgba(168,85,247,0.4); }
-#img-female { border-color: rgba(59,130,246,0.4); }
-#img-qrt { border-color: rgba(16,185,129,0.4); }
-#img-canine { border-color: rgba(234,179,8,0.4); }
-
-/* ========== ELECTRONIC SECURITY COLORS ========== */
-/* Icon Colors */
-#card-cctv .service-icon { background: rgba(59,130,246,0.15); color: #3b82f6; }
-#card-access .service-icon { background: rgba(139,92,246,0.15); color: #8b5cf6; }
-#card-intrusion .service-icon { background: rgba(239,68,68,0.15); color: #ef4444; }
-#card-fire .service-icon { background: rgba(245,158,11,0.15); color: #f59e0b; }
-
-/* Tag Colors */
-#tag-cctv { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.4); color: #3b82f6; }
-#tag-access { background: rgba(139,92,246,0.12); border-color: rgba(139,92,246,0.4); color: #8b5cf6; }
-#tag-intrusion { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.4); color: #ef4444; }
-#tag-fire { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.4); color: #f59e0b; }
-
-/* Feature Badge Colors */
-#features-cctv span { background: rgba(59,130,246,0.12); color: #3b82f6; }
-#features-access span { background: rgba(139,92,246,0.12); color: #8b5cf6; }
-#features-intrusion span { background: rgba(239,68,68,0.12); color: #ef4444; }
-#features-fire span { background: rgba(245,158,11,0.12); color: #f59e0b; }
-
-/* Image Placeholder Border Colors - Electronic */
-#img-cctv { border-color: rgba(59,130,246,0.4); }
-#img-access { border-color: rgba(139,92,246,0.4); }
-#img-intrusion { border-color: rgba(239,68,68,0.4); }
-#img-fire { border-color: rgba(245,158,11,0.4); }
-
-/* ========== HOVER EFFECTS ========== */
-/* Physical Security Hovers */
-#card-uniformed:hover { transform: translateY(-8px) !important; border-color: #ef4444 !important; box-shadow: 0 20px 40px rgba(239,68,68,0.2) !important; }
-#card-armed:hover { transform: translateY(-8px) !important; border-color: #f59e0b !important; box-shadow: 0 20px 40px rgba(245,158,11,0.2) !important; }
-#card-bouncers:hover { transform: translateY(-8px) !important; border-color: #a855f7 !important; box-shadow: 0 20px 40px rgba(168,85,247,0.2) !important; }
-#card-female:hover { transform: translateY(-8px) !important; border-color: #3b82f6 !important; box-shadow: 0 20px 40px rgba(59,130,246,0.2) !important; }
-#card-qrt:hover { transform: translateY(-8px) !important; border-color: #10b981 !important; box-shadow: 0 20px 40px rgba(16,185,129,0.2) !important; }
-#card-canine:hover { transform: translateY(-8px) !important; border-color: #eab308 !important; box-shadow: 0 20px 40px rgba(234,179,8,0.2) !important; }
-
-/* Electronic Security Hovers */
-#card-cctv:hover { transform: translateY(-8px) !important; border-color: #3b82f6 !important; box-shadow: 0 20px 40px rgba(59,130,246,0.2) !important; }
-#card-access:hover { transform: translateY(-8px) !important; border-color: #8b5cf6 !important; box-shadow: 0 20px 40px rgba(139,92,246,0.2) !important; }
-#card-intrusion:hover { transform: translateY(-8px) !important; border-color: #ef4444 !important; box-shadow: 0 20px 40px rgba(239,68,68,0.2) !important; }
-#card-fire:hover { transform: translateY(-8px) !important; border-color: #f59e0b !important; box-shadow: 0 20px 40px rgba(245,158,11,0.2) !important; }
-
-/* Title Hover Colors - Physical */
-#card-uniformed:hover #title-uniformed { color: #ef4444 !important; }
-#card-armed:hover #title-armed { color: #f59e0b !important; }
-#card-bouncers:hover #title-bouncers { color: #a855f7 !important; }
-#card-female:hover #title-female { color: #3b82f6 !important; }
-#card-qrt:hover #title-qrt { color: #10b981 !important; }
-#card-canine:hover #title-canine { color: #eab308 !important; }
-
-/* Title Hover Colors - Electronic */
-#card-cctv:hover #title-cctv { color: #3b82f6 !important; }
-#card-access:hover #title-access { color: #8b5cf6 !important; }
-#card-intrusion:hover #title-intrusion { color: #ef4444 !important; }
-#card-fire:hover #title-fire { color: #f59e0b !important; }
-
-/* Image Placeholder Hover - Physical */
-#card-uniformed:hover .img-placeholder { border-color: #ef4444 !important; background: rgba(239,68,68,0.05) !important; }
-#card-armed:hover .img-placeholder { border-color: #f59e0b !important; background: rgba(245,158,11,0.05) !important; }
-#card-bouncers:hover .img-placeholder { border-color: #a855f7 !important; background: rgba(168,85,247,0.05) !important; }
-#card-female:hover .img-placeholder { border-color: #3b82f6 !important; background: rgba(59,130,246,0.05) !important; }
-#card-qrt:hover .img-placeholder { border-color: #10b981 !important; background: rgba(16,185,129,0.05) !important; }
-#card-canine:hover .img-placeholder { border-color: #eab308 !important; background: rgba(234,179,8,0.05) !important; }
-
-/* Image Placeholder Hover - Electronic */
-#card-cctv:hover .img-placeholder { border-color: #3b82f6 !important; background: rgba(59,130,246,0.05) !important; }
-#card-access:hover .img-placeholder { border-color: #8b5cf6 !important; background: rgba(139,92,246,0.05) !important; }
-#card-intrusion:hover .img-placeholder { border-color: #ef4444 !important; background: rgba(239,68,68,0.05) !important; }
-#card-fire:hover .img-placeholder { border-color: #f59e0b !important; background: rgba(245,158,11,0.05) !important; }
-
-/* ========== SUB TITLE STYLING ========== */
-.sub-security-title {
-  font-size: 1.5rem !important;
-  font-weight: 800 !important;
-  margin: 50px 0 25px 0 !important;
-  padding-left: 15px !important;
-  border-left: 5px solid #f59e0b !important;
-  color: #fff !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-}
-.sub-security-title i { color: #f59e0b !important; font-size: 1.8rem !important; }
-
-/* ========== ANIMATION DELAYS ========== */
-#card-uniformed, #card-cctv { animation-delay: 0.1s; }
-#card-armed, #card-access { animation-delay: 0.2s; }
-#card-bouncers, #card-intrusion { animation-delay: 0.3s; }
-#card-female, #card-fire { animation-delay: 0.4s; }
-#card-qrt { animation-delay: 0.5s; }
-#card-canine { animation-delay: 0.6s; }
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
-  #physical-security-grid,
-  #electronic-security-grid { 
-    grid-template-columns: repeat(2, 1fr) !important; 
-    gap: 20px !important; 
-  }
-}
-@media (max-width: 768px) {
-  #physical-security-grid,
-  #electronic-security-grid { 
-    grid-template-columns: 1fr !important; 
-    gap: 16px !important; 
-  }
-}
-/* ============================================================
-   UNIQUE CSS FOR SPECIALIZED SECURITY SERVICES
-   ============================================================ */
-
-#specialized-security-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 28px !important;
-  margin: 30px 0 40px !important;
-}
-
-#card-event { background: linear-gradient(145deg, rgba(49,46,129,0.85), rgba(30,58,95,0.8)); border-left: 4px solid #a855f7 !important; }
-#card-patrol { background: linear-gradient(145deg, rgba(49,46,129,0.85), rgba(30,58,95,0.8)); border-left: 4px solid #f59e0b !important; }
-#card-keys { background: linear-gradient(145deg, rgba(49,46,129,0.85), rgba(30,58,95,0.8)); border-left: 4px solid #10b981 !important; }
-
-#card-event .service-icon { background: rgba(168,85,247,0.15); color: #a855f7; }
-#card-patrol .service-icon { background: rgba(245,158,11,0.15); color: #f59e0b; }
-#card-keys .service-icon { background: rgba(16,185,129,0.15); color: #10b981; }
-
-#img-event { border-color: rgba(168,85,247,0.4); }
-#img-patrol { border-color: rgba(245,158,11,0.4); }
-#img-keys { border-color: rgba(16,185,129,0.4); }
-
-#features-event span { background: rgba(168,85,247,0.12); color: #a855f7; }
-#features-patrol span { background: rgba(245,158,11,0.12); color: #f59e0b; }
-#features-keys span { background: rgba(16,185,129,0.12); color: #10b981; }
-
-#tag-event { background: rgba(168,85,247,0.12); border-color: rgba(168,85,247,0.4); color: #a855f7; }
-#tag-patrol { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.4); color: #f59e0b; }
-#tag-keys { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.4); color: #10b981; }
-
-#card-event:hover { transform: translateY(-8px) !important; border-color: #a855f7 !important; box-shadow: 0 20px 40px rgba(168,85,247,0.2) !important; }
-#card-patrol:hover { transform: translateY(-8px) !important; border-color: #f59e0b !important; box-shadow: 0 20px 40px rgba(245,158,11,0.2) !important; }
-#card-keys:hover { transform: translateY(-8px) !important; border-color: #10b981 !important; box-shadow: 0 20px 40px rgba(16,185,129,0.2) !important; }
-
-#card-event:hover #title-event { color: #a855f7 !important; }
-#card-patrol:hover #title-patrol { color: #f59e0b !important; }
-#card-keys:hover #title-keys { color: #10b981 !important; }
-
-#card-event:hover .img-placeholder { border-color: #a855f7 !important; background: rgba(168,85,247,0.05) !important; }
-#card-patrol:hover .img-placeholder { border-color: #f59e0b !important; background: rgba(245,158,11,0.05) !important; }
-#card-keys:hover .img-placeholder { border-color: #10b981 !important; background: rgba(16,185,129,0.05) !important; }
-
-#card-event { animation-delay: 0.1s; }
-#card-patrol { animation-delay: 0.2s; }
-#card-keys { animation-delay: 0.3s; }
-
-@media (max-width: 1024px) {
-  #specialized-security-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
-}
-@media (max-width: 768px) {
-  #specialized-security-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
-}
-.service-card {
-  background: var(--glass);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 32px 28px;  /* THIS IS THE KEY - left and right padding */
-  transition: .4s;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 29px;
-    margin-left: 26px;
-}
-.service-card p {
-    color: var(--muted);
-    font-size: 0.86rem;
-    line-height: 1.65;
-    flex-grow: 1;
-    margin-bottom: 14px;
-    margin-left: 9px;
-}
-.service-card h3 {
-   
-    margin-left: 12px;
-}
-.service-tag{
-
-  margin-bottom: 40px;
-  margin-left:8px;
-}
-.service-icon{
-  margin-left:120px;
-  margin-top:40px;
-}
-.img-placeholder{
-
-
-  height:360px  !important;
-}
 </style>
 </head>
 <body>
@@ -3683,7 +3155,27 @@ footer {
   </div>
 </div>
 
+<!--nav id="mainNav">
+ 
 
+
+  <div class="nav-links" id="desktopNav">
+    <a href="#home" class="active" data-section="home">
+      <i class="fas fa-home" style="font-size:0.75rem;margin-right:3px;"></i> Home
+    </a>
+    <a href="#services" data-section="services">Services</a>
+    <a href="#about" data-section="about">About Us</a>
+    <a href="#why" data-section="why">Why Us</a>
+    
+  </div>
+
+  
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</nav--->
 
 
 <div class="nav-overlay" id="navOverlay" onclick="closeMobileMenu()"></div>
@@ -3889,7 +3381,100 @@ footer {
 </section>
 
 
+<!--section id="services">
+  <div class="section-tag">What We Offer</div>
+  <h2 class="section-title">Our <span style="background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Services</span></h2>
+  <p class="section-sub">A comprehensive range of professional services tailored for homes, corporates, industries and institutions.</p>
+  <div class="services-grid">
 
+    <div class="service-card reveal">
+      <div>
+      <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <div>
+
+
+      </div>
+      </div>
+     
+      <h3>Security Services</h3>
+      <p>Professional trained security guards for residential, commercial and industrial premises. Round-the-clock protection.</p>
+      <span class="service-tag">24/7 Available</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-file-invoice-dollar"></i></div>
+      <h3>Payroll Management</h3>
+      <p>Complete payroll solutions â€” salary processing, compliance, PF/ESI management, and HR documentation.</p>
+      <span class="service-tag">HR Solutions</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-keyboard"></i></div>
+      <h3>Data Entry Operators</h3>
+      <p>Skilled data entry professionals for accurate, fast and confidential data management for any industry.</p>
+      <span class="service-tag">BPO Support</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-hard-hat"></i></div>
+      <h3>Civil & Construction</h3>
+      <p>Civil projects, building construction, building repair & maintenance, interior decoration and professional paint services.</p>
+      <span class="service-tag">Construction</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-home"></i></div>
+      <h3>Home Care</h3>
+      <p>Expert home care staff for daily housekeeping, cooking, elderly assistance and all domestic needs.</p>
+      <span class="service-tag">Domestic Help</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;"><i class="fas fa-utensils"></i></div>
+      <h3>Food & Hospitality Staff</h3>
+      <p>Tiffin services, professional chefs, bartenders, kitchen stewards and pantry services for corporates, events and homes.</p>
+      <span class="service-tag">Hospitality</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(234,179,8,0.15);color:#eab308;"><i class="fas fa-bug"></i></div>
+      <h3>Pest Control</h3>
+      <p>Safe and effective pest control solutions for homes, offices, hotels and industries using certified methods.</p>
+      <span class="service-tag">Certified Safe</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-glass-cheers"></i></div>
+      <h3>Event Management</h3>
+      <p  id="event">Complete event planning and execution â€” corporate events, weddings, conferences with dedicated staff deployment.</p>
+      <span class="service-tag">All Events</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(20,184,166,0.15);color:#14b8a6;"><i class="fas fa-utensils"></i></div>
+      <h3>Catering &amp; Food Services</h3>
+      <p>Corporate lunch, PG catering, banquet catering and bulk food services with hygiene-certified kitchen staff.</p>
+      <span class="service-tag">Corporate &amp; PG</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-broom"></i></div>
+      <h3>Housekeeping Services</h3>
+      <p>Professional housekeeping for offices, banks, malls, airports, residential societies â€” carpet shampoo, facade cleaning, sofa cleaning, horticulture and more.</p>
+      <span class="service-tag">Commercial &amp; Residential</span>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-tools"></i></div>
+      <h3>Technical Services</h3>
+      <p>AC service, electrical, carpentry, plumbing, lift operation, DG services, civil construction, interior & renovation projects.</p>
+      <span class="service-tag">AMC Available</span>
+    </div>
+
+  </div>
+</section-->
 <!-- ENHANCED SERVICES SECTION — 4 CATEGORIES -->
 <section id="services">
   <div style="max-width:1400px;margin:0 auto;">
@@ -3897,6 +3482,9 @@ footer {
     <h2 class="section-title">Professional Services <span style="background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">We Provide</span></h2>
     <p class="section-sub">All services organised into 4 key categories — Security, Technical & Civil, Food & Hospitality, and HR & Support.</p>
 
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- CATEGORY 1: SECURITY SERVICES                      -->
+    <!-- ═══════════════════════════════════════════════════ -->
     <div class="cat-header reveal">
       <div class="cat-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626);"><i class="fas fa-shield-alt"></i></div>
       <div>
@@ -3928,138 +3516,7 @@ footer {
         </div>
       </div>
     </div>
-   
 
-    <h3 class="sub-security-title reveal"><i class="fas fa-user-shield"></i> Physical Manned Security</h3>
-<div class="services-grid">
-  <div class="service-card reveal">
-    <div class="img-placeholder"><img src="uniformsecurity.jpg" alt="Uniformed Security Officers"></div>
-    <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-user"></i></div>
-    <h3>Uniformed Security Officers</h3>
-    <p>Deployed at residential, commercial, and industrial sites to deter crime and ensure safety.</p>
-    <div class="feature-badges"><span>24/7 Patrol</span><span>Access Control</span><span>Visitor Management</span></div>
-    <span class="service-tag">Perimeter Security</span>
-  </div>
-
-  <div class="service-card reveal">
-    <div class="img-placeholder"><!--img src="armedsecurity.jpg" alt="Uniformed Security Officers"-->
-
-
-      <img src="armedsecurity.jpg" alt="Uniformed Security Officers" style="
-    width: 171x;
-    width: 12;
-    height: 427px;
-    width: 610px;
-">
-    </div>
-    <div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-gun"></i></div>
-    <h3>Armed Security Guards</h3>
-    <p>Deployed for high-risk locations such as banks, luxury showrooms, and VIP movement.</p>
-    <div class="feature-badges"><span>Licensed Weapons</span><span>High Risk</span><span>Cash Van Security</span></div>
-    <span class="service-tag">Armed Protection</span>
-  </div>
-
-  <div class="service-card reveal">
-    <div class="img-placeholder"><img  style="width:610px;height:324px" src="bouncer.jpg" src="width:"alt="Bouncers & Executive Protection"></div>
-    <div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-fist-raised"></i></div>
-    <h3>Bouncers &amp; Executive Protection</h3>
-    <p>Specialist security for clubs, events, and VIP security protection (PSA).</p>
-    <div class="feature-badges"><span>Crowd Control</span><span>VIP Protocol</span><span>Bodyguard Skills</span></div>
-    <span class="service-tag">Executive Protection</span>
-  </div>
-
-  <div class="service-card reveal">
-    <div class="img-placeholder">
-    
-      <img src="quickresponse.jpg" alt="Quick Response Teams" style="
-    width: 603px;
-    height: 323px;
-">
-    </div>
-    <div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-truck-fast"></i></div>
-    <h3>Quick Response Teams (QRT)</h3>
-    <p>Mobile, highly trained teams for immediate response to security violations.</p>
-    <div class="feature-badges"><span>Rapid Action</span><span>Emergency Response</span><span>Patrol Vehicles</span></div>
-    <span class="service-tag">QRT</span>
-  </div>
-
-  
-</div>
-<h3 class="sub-security-title reveal"><i class="fas fa-video"></i> Electronic Security &amp; Surveillance</h3>
-<div class="services-grid">
-  <div class="service-card reveal">
-    <div class="img-placeholder"><!--img src="cctvsurvilence.jpg" alt="CCTV Surveillance"--->
-
-
-      <img src="cctvsurvilence.jpg" alt="CCTV Surveillance" style="
-    height: 354px;
-    width: 646px;
-">
-    </div>
-    <div class="service-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;"><i class="fas fa-camera"></i></div>
-    <h3>CCTV Surveillance</h3>
-    <p>Installation and remote monitoring of high-definition cameras with AI analytics.</p>
-    <div class="feature-badges"><span>HD Cameras</span><span>Remote Access</span><span>Night Vision</span><span>Motion Detection</span></div>
-    <span class="service-tag">CCTV</span>
-  </div>
-
- 
-
-  <!--div class="service-card reveal">
-    <div class="img-placeholder"><i class="fas fa-bell"></i><span>Add Image</span></div>
-    <div class="service-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-bell"></i></div>
-    <h3>Intrusion Detection &amp; Alarm Systems</h3>
-    <p>Electronic systems to alert operators to unauthorized access in real-time.</p>
-    <div class="feature-badges"><span>Motion Sensors</span><span>Glass Break</span><span>Door Sensors</span></div>
-    <span class="service-tag">Alarm Systems</span>
-  </div-->
-
-  <div class="service-card reveal">
-    <div class="img-placeholder">  <img src="firesecurity.webp" style="
-    width: 635px;
-    height: 357px;
-"></div>
-    <div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-fire-extinguisher"></i></div>
-    <h3>Fire Detection &amp; Prevention</h3>
-    <p>Installation and maintenance of fire alarm systems, smoke detectors, and sprinklers.</p>
-    <div class="feature-badges"><span>Smoke Detectors</span><span>Fire Panels</span><span>Sprinkler Systems</span><span>Heat Sensors</span></div>
-    <span class="service-tag">Fire Safety</span>
-  </div>
-
-</div>
-
-<h3 class="sub-security-title reveal"><i class="fas fa-star-of-life"></i> Specialized Security Services</h3>
-<div class="services-grid">
-  <div class="service-card reveal">
-    <div class="img-placeholder"><img  style=" height:670px;width: 653px;" ; src="eventsecurity.webp" alt="Event Security"></div>
-    <div class="service-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;"><i class="fas fa-calendar-alt"></i></div>
-    <h3>Event Security</h3>
-    <p>Security staff for weddings, birthday parties, corporate events, and social gatherings.</p>
-    <div class="feature-badges"><span>Weddings</span><span>Parties</span><span>Corporate Events</span><span>Crowd Management</span></div>
-    <span class="service-tag">Event Security</span>
-  </div>
-
-  <div class="service-card reveal">
-    <div class="img-placeholder"><img src="monitoring.jpg" alt="Service Image" style="width:100%; height:457px; object-fit:cover; border-radius:16px;"></div>
-    <div class="service-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-clipboard-list"></i></div>
-    <h3>Guard Monitoring &amp; Patrol</h3>
-    
-    <div class="feature-badges"><span>Night Patrol</span><span>Guard Tracking</span><span>Security Audit</span></div>
-    <span class="service-tag">Patrol Services</span>
-  </div>
-
-  <!---div class="service-card reveal">
-    <div class="img-placeholder"><i class="fas fa-key"></i><span>Add Image</span></div>
-    <div class="service-icon" style="background:rgba(16,185,129,0.15);color:#10b981;"><i class="fas fa-key"></i></div>
-    <h3>Key Holding &amp; Lock Change</h3>
-    <p>Secure key holding, emergency lock change, and master key system for offices.</p>
-    <div class="feature-badges"><span>Key Holding</span><span>Lock Change</span><span>Master Key System</span></div>
-    <span class="service-tag">Key Management</span>
-  </div--->
-</div>
-  
-
-</div>
     <!-- ═══════════════════════════════════════════════════ -->
     <!-- CATEGORY 2: TECHNICAL & CIVIL                      -->
     <!-- ═══════════════════════════════════════════════════ -->
